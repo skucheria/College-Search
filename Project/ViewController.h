@@ -1,0 +1,29 @@
+//
+//  ViewController.h
+//  Project
+//
+//  Created by Siddharth Kucheria on 7/9/15.
+//  Copyright (c) 2015 Siddharth Kucheria. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "RegisterViewController.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+@interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *username;
+
+@property (strong, nonatomic) IBOutlet UITextField *password;
+
+@property (strong, nonatomic) IBOutlet UIButton *loginB;
+
+@property (strong, nonatomic) IBOutlet UIButton *registerB;
+
+- (IBAction)loginButtonPressed:(id)sender;
+
+
+
+
+
+
+@end
