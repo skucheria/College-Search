@@ -30,9 +30,6 @@
             NSLog(@" %f", _gpa);
             
         }
-    
-    
-
         else{
             NSLog(@"Error in periodsQuery: %@ %@",error,error.userInfo);
         }
