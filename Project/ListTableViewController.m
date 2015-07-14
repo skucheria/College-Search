@@ -13,6 +13,8 @@
 
 @property double gpa;
 
+@property NSMutableArray *allSchools;
+
 @end
 
 @implementation ListTableViewController
@@ -21,13 +23,18 @@
     [super viewDidLoad];
     
     PFQuery *collegeQuery = [PFQuery queryWithClassName:@"Colleges"];
-    [collegeQuery whereKey:@"name" equalTo:@"University of Southern California"];
+    [collegeQuery whereKey:@"name" notEqualTo:@"poop"];
+    [collegeQuery setLimit:1000];
     [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
         if (!error) {
-            NSLog(@"%@",objects);
+            NSLog(@" %@", objects);
+            for(int i=0; i<objects.count; ++i){
+                _allSchools[i] = objects[i];
+                
+            }
             
-            _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
-            NSLog(@" %f", _gpa);
+//              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
+//            NSLog(@" %f", _gpa);
             
         }
         else{
@@ -51,27 +58,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 0;
 }
+*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    return _allSchools.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
