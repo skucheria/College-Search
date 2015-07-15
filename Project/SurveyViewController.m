@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIButton *btn = [[UIButton alloc] init];
-    
     // button customization
     
     [btn addTarget:self action:@selector(showPickerView:) forControlEvents:UIControlEventTouchUpInside];
