@@ -13,7 +13,7 @@
 
 @property double gpa;
 
-@property NSMutableArray *allSchools;
+@property NSUInteger numSchools;
 
 @end
 
@@ -27,11 +27,11 @@
     [collegeQuery setLimit:1000];
     [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
         if (!error) {
-            NSLog(@" %@", objects);
-            for(int i=0; i<objects.count; ++i){
-                _allSchools[i] = objects[i];
-                
-            }
+            _numSchools = objects.count;
+            NSArray *allSchools = [NSArray arrayWithObjects:objects, nil];
+//            NSLog(@" %@", objects);
+            NSLog(@" %@", allSchools);
+
             
 //              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
 //            NSLog(@" %f", _gpa);
@@ -58,21 +58,51 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 2;
 }
-*/
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _allSchools.count;
+    return _numSchools;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    
+    NSLog(@"Pressed a College");
+    
+    /*
+    NSDictionary *friend = [self.userFriends objectAtIndex:indexPath.row];
+    FriendPeriodViewController *periodsList = [[FriendPeriodViewController alloc] init];
+    [periodsList setLoggedInFreesArray:self.freesArray];
+    [periodsList setActiveFriend:friend];
+    [periodsList setDayOfCycle:self.dayOfCycleUS];
+    NSLog(@"in didSelect dayOfCycleUS = %d",self.dayOfCycleUS);
+    [self.navigationController pushViewController:periodsList animated:(YES)];
+    
+    */
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name" forIndexPath:indexPath];
+    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
+
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"name"];
+    }
+    
+    cell.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
+
     
     // Configure the cell...
     
