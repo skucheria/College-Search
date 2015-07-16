@@ -4,21 +4,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Title-->
-        <scene sceneID="hNz-n2-bh7">
+        <!--Item-->
+        <scene sceneID="To5-7g-WR0">
             <objects>
-                <viewController storyboardIdentifier="ListTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="ListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="agp-9O-AAj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableViewController storyboardIdentifier="ListTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jdy-cJ-r7f" customClass="ListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CnJ-n4-48i">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jdy-cJ-r7f" id="RVI-6Z-nhq"/>
+                            <outlet property="delegate" destination="jdy-cJ-r7f" id="2Yf-pG-3Ex"/>
+                        </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Lists" image="List_of_Works_32.png" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" title="Title" id="WKC-ZC-gTn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="VJt-b7-3Zh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWe-7z-RjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="58"/>
+            <point key="canvasLocation" x="-247.5" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cJq-Vl-dRp">
@@ -310,7 +312,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="jdy-cJ-r7f" kind="relationship" relationship="viewControllers" id="zZR-W8-f7Q"/>
                         <segue destination="6lG-fX-1pk" kind="relationship" relationship="viewControllers" id="Nec-gt-iyr"/>
                     </connections>
                 </tabBarController>
@@ -320,7 +322,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="List_of_Works_32.png" width="32" height="32"/>
         <image name="Settings_gears_32.png" width="32" height="32"/>
         <image name="Settings_gears_64.png" width="64" height="64"/>
         <image name="second" width="30" height="30"/>

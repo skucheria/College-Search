@@ -113,21 +113,9 @@
 			children = (
 				36EB938E1B4F188A00CCF273 /* AppDelegate.h */,
 				36EB938F1B4F188A00CCF273 /* AppDelegate.m */,
-				36EB93B31B4F18B700CCF273 /* ViewController.h */,
-				36EB93B41B4F18B800CCF273 /* ViewController.m */,
-				36EB93B61B4F27A300CCF273 /* RegisterViewController.h */,
-				36EB93B71B4F27A300CCF273 /* RegisterViewController.m */,
-				36F971461B51DC020062BFDF /* SurveyViewController.h */,
-				36F971471B51DC020062BFDF /* SurveyViewController.m */,
-				363A66E71B54BA2E0001B694 /* ListTableViewController.h */,
-				363A66E81B54BA2E0001B694 /* ListTableViewController.m */,
-				36EB93911B4F188A00CCF273 /* FirstViewController.h */,
-				36EB93921B4F188A00CCF273 /* FirstViewController.m */,
-				36EB93941B4F188A00CCF273 /* SecondViewController.h */,
-				36EB93951B4F188A00CCF273 /* SecondViewController.m */,
 				36EB93971B4F188A00CCF273 /* Main.storyboard */,
+				FC0F9D151B56EF1000172CC1 /* View Controllers */,
 				36EB939A1B4F188A00CCF273 /* Images.xcassets */,
-				36EB939C1B4F188A00CCF273 /* LaunchScreen.xib */,
 				36EB938A1B4F188A00CCF273 /* Supporting Files */,
 			);
 			path = Project;
@@ -166,6 +154,26 @@
 				8F0601333C8014906B7EE99E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC0F9D151B56EF1000172CC1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36EB939C1B4F188A00CCF273 /* LaunchScreen.xib */,
+				36EB93B31B4F18B700CCF273 /* ViewController.h */,
+				36EB93B41B4F18B800CCF273 /* ViewController.m */,
+				36EB93B61B4F27A300CCF273 /* RegisterViewController.h */,
+				36EB93B71B4F27A300CCF273 /* RegisterViewController.m */,
+				36F971461B51DC020062BFDF /* SurveyViewController.h */,
+				36F971471B51DC020062BFDF /* SurveyViewController.m */,
+				363A66E71B54BA2E0001B694 /* ListTableViewController.h */,
+				363A66E81B54BA2E0001B694 /* ListTableViewController.m */,
+				36EB93911B4F188A00CCF273 /* FirstViewController.h */,
+				36EB93921B4F188A00CCF273 /* FirstViewController.m */,
+				36EB93941B4F188A00CCF273 /* SecondViewController.h */,
+				36EB93951B4F188A00CCF273 /* SecondViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
