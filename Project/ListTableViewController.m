@@ -23,14 +23,14 @@
     [super viewDidLoad];
     
     PFQuery *collegeQuery = [PFQuery queryWithClassName:@"Colleges"];
-    [collegeQuery whereKey:@"name" notEqualTo:@"poop"];
+    [collegeQuery whereKey:@"gpa" notEqualTo:@"5"];
     [collegeQuery setLimit:1000];
     [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
         if (!error) {
             _numSchools = objects.count;
             NSArray *allSchools = [NSArray arrayWithObjects:objects, nil];
 //            NSLog(@" %@", objects);
-            NSLog(@" %@", allSchools);
+            NSLog(@" %f", allSchools);
 
             
 //              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
