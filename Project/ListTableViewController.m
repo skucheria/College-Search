@@ -30,7 +30,7 @@
             _numSchools = objects.count;
             NSArray *allSchools = [NSArray arrayWithObjects:objects, nil];
 //            NSLog(@" %@", objects);
-            NSLog(@" %f", allSchools);
+            NSLog(@" %@", allSchools);
 
             
 //              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
