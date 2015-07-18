@@ -20,6 +20,7 @@
 		36EB93B81B4F27A300CCF273 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EB93B71B4F27A300CCF273 /* RegisterViewController.m */; };
 		36F971481B51DC020062BFDF /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F971471B51DC020062BFDF /* SurveyViewController.m */; };
 		CFC68A06F64630A779EE0F41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606881A26C519D7021C578E6 /* libPods.a */; };
+		FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC25866E1B59F81E00589CA9 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		606881A26C519D7021C578E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0601333C8014906B7EE99E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		92EA1CF491E2103CF07EC101 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FC25866D1B59F81E00589CA9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		FC25866E1B59F81E00589CA9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				36EB93921B4F188A00CCF273 /* FirstViewController.m */,
 				36EB93941B4F188A00CCF273 /* SecondViewController.h */,
 				36EB93951B4F188A00CCF273 /* SecondViewController.m */,
+				FC25866D1B59F81E00589CA9 /* SettingsViewController.h */,
+				FC25866E1B59F81E00589CA9 /* SettingsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				36EB93961B4F188A00CCF273 /* SecondViewController.m in Sources */,
 				36EB93B81B4F27A300CCF273 /* RegisterViewController.m in Sources */,
 				36F971481B51DC020062BFDF /* SurveyViewController.m in Sources */,
+				FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */,
 				36EB93901B4F188A00CCF273 /* AppDelegate.m in Sources */,
 				36EB93931B4F188A00CCF273 /* FirstViewController.m in Sources */,
 				36EB938D1B4F188A00CCF273 /* main.m in Sources */,
