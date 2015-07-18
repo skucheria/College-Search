@@ -7,7 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-
+#import "AcknowledgementsViewController.h"
 @interface SettingsViewController ()
 
 @end
@@ -73,6 +73,63 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row==0) {
+        //edit free periods
+//        FreeSelectionViewController *freeSelection = [[FreeSelectionViewController alloc]init];
+//        [freeSelection setReferer:@"settings"];
+//        [self.navigationController pushViewController:freeSelection animated:true];
+        /*PeriodSelectionViewController *periodsController = [[PeriodSelectionViewController alloc] initWithStyle:UITableViewStylePlain];
+         [periodsController setReferer:@"settings"];
+         [self.navigationController pushViewController:periodsController animated:YES];*/
+        NSLog(@"Survey is pressed");
+        
+    }
+    else if(indexPath.row==1){
+        //change campus
+//        UITableViewController *campusController = [[CampusSelectionViewController alloc] initWithStyle:UITableViewStylePlain];
+//        [self.navigationController pushViewController:campusController animated:true];
+        NSLog(@"Select Campus pressed");
+    }
+    else if (indexPath.row==2){
+        //Acknowledgements
+        UIViewController *ackController = [[AcknowledgementsViewController alloc]init];
+       [self.navigationController pushViewController:ackController animated:true];
+        NSLog(@"Acknowledgments button pressed");
+        
+    }
+    else if(indexPath.row==3){
+        //logout of facebook
+        /*
+        NSString *logoutString = [NSString stringWithFormat:@"You are logged in as %@.\nAre you sure you want to logout?",[PFUser currentUser][@"fullname"]];
+        UIAlertController *logoutAlert = [UIAlertController alertControllerWithTitle:nil message:logoutString preferredStyle:UIAlertControllerStyleActionSheet];
+        [logoutAlert addAction:[UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action){
+            [FBSession.activeSession close];
+            [FBSession setActiveSession:nil];
+            [[PFFacebookUtils session] closeAndClearTokenInformation];
+            [PFUser logOut];
+            UIViewController *loginController = [[LoginViewController alloc] init];
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginController];
+            navController.navigationBarHidden = true;
+            [self presentViewController:navController animated:false completion:nil];
+            NSLog(@"LOGGED OUT!");
+        }]];
+        [logoutAlert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+            NSLog(@"Cancel action selected");
+        }]];
+        [self presentViewController:logoutAlert animated:true completion:nil];
+        
+        */
+        
+        NSLog(@"Logout pressed");
+        
+        
+    }
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
