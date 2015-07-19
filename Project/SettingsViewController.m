@@ -104,18 +104,16 @@
     }
     else if(indexPath.row==3){
         //logout of facebook
-        /*
-        NSString *logoutString = [NSString stringWithFormat:@"You are logged in as %@.\nAre you sure you want to logout?",[PFUser currentUser][@"fullname"]];
+        
+        NSString *logoutString = [NSString stringWithFormat:@"You are logged in as %@.\nAre you sure you want to logout?",[PFUser currentUser][@"username"]];
         UIAlertController *logoutAlert = [UIAlertController alertControllerWithTitle:nil message:logoutString preferredStyle:UIAlertControllerStyleActionSheet];
         [logoutAlert addAction:[UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action){
-            [FBSession.activeSession close];
-            [FBSession setActiveSession:nil];
-            [[PFFacebookUtils session] closeAndClearTokenInformation];
             [PFUser logOut];
-            UIViewController *loginController = [[LoginViewController alloc] init];
-            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginController];
-            navController.navigationBarHidden = true;
-            [self presentViewController:navController animated:false completion:nil];
+            UIStoryboard *mainstoryboard = self.storyboard;
+            
+            UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
+//            navController.navigationBarHidden = true;
+            [self presentViewController:loginvc animated:NO completion:nil];
             NSLog(@"LOGGED OUT!");
         }]];
         [logoutAlert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
@@ -123,24 +121,24 @@
         }]];
         [self presentViewController:logoutAlert animated:true completion:nil];
         
-        */
+        
         
         [PFUser logOut];
         
-        UIStoryboard *mainstoryboard = self.storyboard;
-        
-        UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
+       
         
         //CATransition* transition = [CATransition animation];
         //transition.duration = 0.2;
         //transition.type = kCATransitionFade;
         //[self.view.window.layer addAnimation:transition forKey:kCATransition];
-        [self presentViewController:loginvc animated:NO completion:nil];
         NSLog(@"Going to next view");
         
 
         
         NSLog(@"Logout pressed");
+        
+//        NSLog(@" %@", [PFUser currentUser]);
+    
         
         
     }
