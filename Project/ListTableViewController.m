@@ -15,6 +15,8 @@
 
 @property NSUInteger numSchools;
 
+@property NSArray* allSchools;
+
 @end
 
 @implementation ListTableViewController
@@ -23,14 +25,13 @@
     [super viewDidLoad];
     
     PFQuery *collegeQuery = [PFQuery queryWithClassName:@"Colleges"];
-    [collegeQuery whereKey:@"gpa" notEqualTo:@"5"];
+    [collegeQuery whereKey:@"name" notEqualTo:@"poop"];
     [collegeQuery setLimit:1000];
     [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
         if (!error) {
             _numSchools = objects.count;
-            NSArray *allSchools = [NSArray arrayWithObjects:objects, nil];
+             self.allSchools = [NSArray arrayWithObjects:objects, nil];
 //            NSLog(@" %@", objects);
-            NSLog(@" %@", allSchools);
 
             
 //              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
@@ -61,19 +62,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _numSchools;
+    return 32;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
+  
     
     NSLog(@"Pressed a College");
     
@@ -92,16 +93,20 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name" forIndexPath:indexPath];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
+    
+    
+    NSString *college = [self.allSchools objectAtIndex:indexPath.row];
+    cell.textLabel.text = college;
+    
 
     
 //    if (cell == nil) {
 //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"name"];
 //    }
     
-    cell.textLabel.text = @"USC";
     
     
     cell.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];

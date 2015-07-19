@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "AcknowledgementsViewController.h"
+#import <Parse/Parse.h>
 @interface SettingsViewController ()
 
 @end
@@ -123,6 +124,21 @@
         [self presentViewController:logoutAlert animated:true completion:nil];
         
         */
+        
+        [PFUser logOut];
+        
+        UIStoryboard *mainstoryboard = self.storyboard;
+        
+        UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        
+        //CATransition* transition = [CATransition animation];
+        //transition.duration = 0.2;
+        //transition.type = kCATransitionFade;
+        //[self.view.window.layer addAnimation:transition forKey:kCATransition];
+        [self presentViewController:loginvc animated:NO completion:nil];
+        NSLog(@"Going to next view");
+        
+
         
         NSLog(@"Logout pressed");
         
