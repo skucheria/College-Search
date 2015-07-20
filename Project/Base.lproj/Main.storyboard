@@ -186,6 +186,20 @@
                                     <rect key="frame" x="62" y="185" width="254" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRA-nQ-qvY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="For password? Click here to reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="69" y="358" width="231" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="j8S-tY-eZX" kind="popoverPresentation" popoverAnchorView="QRA-nQ-qvY" id="wiF-oX-uab">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -194,6 +208,7 @@
                                 <exclude reference="G1s-V7-Cin"/>
                                 <exclude reference="PPg-aq-o2u"/>
                                 <exclude reference="wVa-ad-PfZ"/>
+                                <exclude reference="QRA-nQ-qvY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -202,6 +217,7 @@
                                 <include reference="G1s-V7-Cin"/>
                                 <include reference="PPg-aq-o2u"/>
                                 <include reference="wVa-ad-PfZ"/>
+                                <include reference="QRA-nQ-qvY"/>
                             </mask>
                         </variation>
                     </view>
@@ -215,6 +231,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdF-W0-n1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2650.5" y="-56"/>
+        </scene>
+        <!--Reset View Controller-->
+        <scene sceneID="t9A-hV-JO2">
+            <objects>
+                <viewController storyboardIdentifier="ResetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j8S-tY-eZX" customClass="ResetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9DB-ei-BTQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXl-ZA-LSt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EfB-A4-uPs">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-fQ-O0h">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="160" width="226" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-XE-RfS">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="108" y="57" width="179" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="All-KT-Tmd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Send Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="158" y="242" width="78" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendEmailButton:" destination="j8S-tY-eZX" eventType="touchUpInside" id="87h-V8-AdM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yIO-fQ-O0h"/>
+                                <exclude reference="mQ4-XE-RfS"/>
+                                <exclude reference="All-KT-Tmd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yIO-fQ-O0h"/>
+                                <include reference="mQ4-XE-RfS"/>
+                                <include reference="All-KT-Tmd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="yIO-fQ-O0h" id="xV8-0S-KdL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPU-BV-y7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2928" y="654"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="nbf-La-CYu">
