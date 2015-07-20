@@ -28,8 +28,14 @@
     [PFUser requestPasswordResetForEmailInBackground:enteredEmail block:^(BOOL succeeded, NSError *error) {
         if(!error)
         {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email Sent" message:@"An email has been sent. You can reset your password." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+
             NSLog(@"Ok");
         } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"The email entered is not associated with any user. Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+                
         }
     }];
 
