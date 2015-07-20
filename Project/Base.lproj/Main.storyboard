@@ -4,55 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="cJq-Vl-dRp">
-            <objects>
-                <navigationController id="vhs-IP-ha8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0Pd-FC-oLZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tww-ph-Ym2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="4cM-1n-Nz6" kind="relationship" relationship="rootViewController" id="oY8-vG-vIF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb8-mp-y3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1081.5" y="-776"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ca1-t1-Dle">
-            <objects>
-                <tableViewController id="4cM-1n-Nz6" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="c69-Vq-yTV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dZG-vo-Wb4">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZG-vo-Wb4" id="R7E-nq-Lvy">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4cM-1n-Nz6" id="712-Js-Kdz"/>
-                            <outlet property="delegate" destination="4cM-1n-Nz6" id="Lgs-KO-hdZ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="3uT-Ed-GYo"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qg7-VO-DSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-550" y="-776"/>
-        </scene>
         <!--Root View Controller-->
         <scene sceneID="kfU-2z-VOH">
             <objects>
                 <tableViewController storyboardIdentifier="ListTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uv8-ze-IWm" customClass="ListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2py-BJ-m5A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -322,7 +279,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="registerButtonPressed:" destination="SxZ-lS-SYK" eventType="touchUpInside" id="5GV-mw-ZJE"/>
-                                    <segue destination="vhs-IP-ha8" kind="push" id="kVn-3q-SFX"/>
                                 </connections>
                             </button>
                         </subviews>

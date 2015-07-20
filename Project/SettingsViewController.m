@@ -104,7 +104,8 @@
     }
     else if(indexPath.row==3){
         //logout of facebook
-        
+//        PFUser *current = [PFUser currentUser];
+//        NSString *username =
         NSString *logoutString = [NSString stringWithFormat:@"You are logged in as %@.\nAre you sure you want to logout?",[PFUser currentUser][@"username"]];
         UIAlertController *logoutAlert = [UIAlertController alertControllerWithTitle:nil message:logoutString preferredStyle:UIAlertControllerStyleActionSheet];
         [logoutAlert addAction:[UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action){

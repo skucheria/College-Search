@@ -39,19 +39,51 @@
             
             
             // UIWindow *mywindow = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-            //self.window=mywindow;
-            UIStoryboard *mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            
-            UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-            
-            //CATransition* transition = [CATransition animation];
+                    //CATransition* transition = [CATransition animation];
             //transition.duration = 0.2;
             //transition.type = kCATransitionFade;
             //[self.view.window.layer addAnimation:transition forKey:kCATransition];
-            [self presentViewController:loginvc animated:NO completion:nil];
         }
     }
      ];
+    
+    PFObject *userSave = [PFObject objectWithClassName:@"User"];
+    [userSave setObject:_nameField.text forKey:@"fullname"];
+    
+    [newUser saveInBackground];
+    
+    //self.window=mywindow;
+    UIStoryboard *mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    
+
+    [self presentViewController:loginvc animated:NO completion:nil];
+   
+    /*{
+        if (error) {
+            NSLog(@"error in name save: %@ %@",error,error.userInfo);
+        }else{
+            NSLog(@"No error in free save");
+        }
+        
+//        [loadingView.loadingIndicator stopAnimating];
+//        [loadingView removeFromSuperview];
+        
+        //check referer, return to previous VC or push to next VC
+//        if ([_referer isEqualToString:@"settings"]) {
+//            [self.navigationController popViewControllerAnimated:true];
+//        }
+//        else{
+//            UITableViewController *tableViewController = [[FriendViewController alloc] initWithStyle:UITableViewStyleGrouped];
+//            UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+//            [self presentViewController:controller animated:NO completion:nil];
+     }];
+
+*/
+
+    
+
 }
 
 - (IBAction)registerButtonPressed:(id)sender {
