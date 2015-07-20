@@ -27,7 +27,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.title = @"Acknowledgements";
-    [self.view setBackgroundColor:[UIColor colorWithRed:.26 green:.26 blue:.26 alpha:1.0]];
+//    [self.view setBackgroundColor:[UIColor colorWithRed:.26 green:.26 blue:.26 alpha:1.0]];
     
     int topOffSet = self.navigationController.navigationBar.frame.size.height + self.navigationController.navigationBar.frame.origin.y;
     UILabel *creatorsLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, topOffSet, self.view.frame.size.width-20, 50)];

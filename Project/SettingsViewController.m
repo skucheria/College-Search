@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Settings";
-    self.view.backgroundColor = [UIColor colorWithRed:0.45 green:0.40 blue:0.74 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
     
     self.tableView.alwaysBounceVertical = false;
 
@@ -52,7 +52,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"setting"];
     }
     
-    cell.backgroundColor = [UIColor colorWithRed:0.45 green:0.40 blue:0.74 alpha:1.0];
+    cell.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
     cell.textLabel.textColor = [UIColor whiteColor];
     
     if (indexPath.row==0){

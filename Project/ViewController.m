@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor colorWithRed:0.45 green:0.40 blue:0.74 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
     loginB.frame = CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height - 350, 400, 40);
     loginB.layer.cornerRadius = 10;
     loginB.layer.masksToBounds = true;

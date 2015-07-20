@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:0.45 green:0.40 blue:0.74 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
 
     //HERE I WILL GET THE TEXT FOR LOGIN AND PASSWORD AND STORE IT IN PARSE.I WILL ALSO STORE THE EMAIL AND FIRST AND LAST NAME. 
     

@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
     // Do any additional setup after loading the view.
 }
 
@@ -30,12 +31,13 @@
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email Sent" message:@"An email has been sent. You can reset your password." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
+            
+            NSLog(@"Email Sent!");
 
-            NSLog(@"Ok");
         } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"The email entered is not associated with any user. Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
-                
+            NSLog(@"Not valid email");
         }
     }];
 
