@@ -21,6 +21,7 @@
 		CFC68A06F64630A779EE0F41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606881A26C519D7021C578E6 /* libPods.a */; };
 		FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC25866E1B59F81E00589CA9 /* SettingsViewController.m */; };
 		FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */; };
+		FCB1A9AF1B5C978B009B265A /* ResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB1A9AE1B5C978B009B265A /* ResetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		FC25866E1B59F81E00589CA9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		FC2586701B59FCE900589CA9 /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
 		FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
+		FCB1A9AD1B5C978B009B265A /* ResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetViewController.h; sourceTree = "<group>"; };
+		FCB1A9AE1B5C978B009B265A /* ResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				36EB93B41B4F18B800CCF273 /* ViewController.m */,
 				36EB93B61B4F27A300CCF273 /* RegisterViewController.h */,
 				36EB93B71B4F27A300CCF273 /* RegisterViewController.m */,
+				FCB1A9AD1B5C978B009B265A /* ResetViewController.h */,
+				FCB1A9AE1B5C978B009B265A /* ResetViewController.m */,
 				36F971461B51DC020062BFDF /* SurveyViewController.h */,
 				36F971471B51DC020062BFDF /* SurveyViewController.m */,
 				363A66E71B54BA2E0001B694 /* ListTableViewController.h */,
@@ -325,6 +330,7 @@
 				FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */,
 				36EB938D1B4F188A00CCF273 /* main.m in Sources */,
 				36EB93B51B4F18B800CCF273 /* ViewController.m in Sources */,
+				FCB1A9AF1B5C978B009B265A /* ResetViewController.m in Sources */,
 				363A66E91B54BA2E0001B694 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
