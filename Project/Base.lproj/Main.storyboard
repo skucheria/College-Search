@@ -13,10 +13,32 @@
                         <viewControllerLayoutGuide type="bottom" id="0rO-5G-qJT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LDN-VK-9bN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tus-m7-Bgk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="28" width="209" height="196"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tus-m7-Bgk"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tus-m7-Bgk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Male_profile_user_shadow_32.png" id="PWu-4G-2tG"/>
+                    <connections>
+                        <outlet property="profileView" destination="tus-m7-Bgk" id="c44-F6-6SZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtK-mb-0oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,6 +394,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2233.5" y="222"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fKD-Iv-Cg3">
+            <objects>
+                <viewController id="iT0-pB-ZRp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vcl-n1-dAJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yma-oh-aBf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Jb-xS-MGU">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zK-Wc-kj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
