@@ -62,6 +62,15 @@
 }
 
 
+-(void) viewDidAppear:(BOOL)animated{
+    PFUser *user = [PFUser currentUser];
+    if (user.username !=nil){
+        UIStoryboard *mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"tabViewController"];
+        [self presentViewController:loginvc animated:NO completion:nil];
+    }
+}
 
 
 
