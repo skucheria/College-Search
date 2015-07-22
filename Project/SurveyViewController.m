@@ -10,6 +10,7 @@
 
 @interface SurveyViewController ()
 
+@property NSArray *surveyArray;
 
 @end
 
@@ -17,29 +18,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *btn = [[UIButton alloc] init];
-    // button customization
+    self.view.backgroundColor =[UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
+    self.title = @"Survey";
     
-    [btn addTarget:self action:@selector(showPickerView:) forControlEvents:UIControlEventTouchUpInside];
+    UITextField *q1Field = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-50,self.view.frame.size.height/2-200,150, 50)];
+    q1Field.placeholder = @"Small, Medium, or Large";
+    q1Field.layer.borderColor =[[UIColor redColor ]CGColor];
+    [self.view addSubview:q1Field];
     
-    [self.view addSubview:btn];
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(handleSaveButton:)];
+    saveButton.tintColor = [UIColor greenColor];
+    self.navigationItem.rightBarButtonItem = saveButton;
+
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(handleCancelButton:)];
+    cancelButton.tintColor = [UIColor colorWithRed:0.88 green:0.40 blue:0.40 alpha:1.0];
+    self.navigationItem.leftBarButtonItem = cancelButton;
+
+    
+    
     // Do any additional setup after loading the view.
 }
 
-- (void)showPickerView:(UIButton*)sender
-{
-    UIPickerView *picker = [[UIPickerView alloc] init];
-    picker.tag = 998998;
+- (void)handleSaveButton:(id)sender{
+    
+    
+    
+    
+}
+
+- (void)handleCancelButton:(id)sender{
+    
+    
+}
     
     // picker customization..
     
-    [self.view insertSubview:picker aboveSubview:self.view];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 /*
 #pragma mark - Navigation

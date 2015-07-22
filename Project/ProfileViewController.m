@@ -12,18 +12,26 @@
 @interface ProfileViewController ()
 @property UILabel *name;
 @property int height;
+//@property UIImageView* profileView;
 
 @end
 
 @implementation ProfileViewController
-@synthesize profileView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
  
-
     
+    
+    UIImageView *profileView;
+    profileView = [[UIImageView alloc]initWithFrame:CGRectMake(40, 40, 80, 80)];
+    profileView.layer.cornerRadius = (80)/2;
+    profileView.layer.masksToBounds = true;
+    profileView.layer.borderColor = (__bridge CGColorRef)([UIColor whiteColor]);
+//    profileView.image = [UIImage imageNamed:@"Male_profile_user_shadow_512"];
+    profileView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:profileView];
     
     // Do any additional setup after loading the view.
 }
@@ -32,16 +40,12 @@
     [super viewWillAppear:animated];
    
     PFUser *current = [PFUser currentUser];
-    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 20, 100, 200)];
+    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2, 20, 100, 200)];
     nameLabel.text = current.username;
 
     nameLabel.textColor = [UIColor whiteColor];
     [self.view addSubview:nameLabel];
     
-    profileView = [[UIImageView alloc]initWithFrame:CGRectMake(40, 40, 120, 120)];
-    profileView.layer.cornerRadius = (120)/2;
-    profileView.layer.masksToBounds = true;
-    profileView.backgroundColor = [UIColor blackColor];
 
 
     

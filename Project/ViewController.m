@@ -32,7 +32,8 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
-    loginB.frame = CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height - 350, 400, 40);
+    
+    loginB.frame = CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height - 350, 400, 120);
     loginB.layer.cornerRadius = 10;
     loginB.layer.masksToBounds = true;
     loginB.layer.borderWidth=1;
@@ -40,7 +41,7 @@
     [loginB setTitle:@"Login" forState:UIControlStateNormal];
     [loginB.titleLabel setTextAlignment: NSTextAlignmentCenter];
     
-    registerB.frame = CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height - 300, 400, 40);
+    registerB.frame = CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height - 260, 40, 120);
     registerB.layer.cornerRadius = 10;
     registerB.layer.masksToBounds = true;
     registerB.layer.borderWidth=1;

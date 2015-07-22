@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "AcknowledgementsViewController.h"
+#import "SurveyViewController.h"
 #import <Parse/Parse.h>
 @interface SettingsViewController ()
 
@@ -79,6 +80,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row==0) {
+        UIViewController *surveyController = [[SurveyViewController alloc] init];
+        [self.navigationController pushViewController:surveyController animated:true];
+        
         //edit free periods
 //        FreeSelectionViewController *freeSelection = [[FreeSelectionViewController alloc]init];
 //        [freeSelection setReferer:@"settings"];
@@ -86,6 +90,8 @@
         /*PeriodSelectionViewController *periodsController = [[PeriodSelectionViewController alloc] initWithStyle:UITableViewStylePlain];
          [periodsController setReferer:@"settings"];
          [self.navigationController pushViewController:periodsController animated:YES];*/
+        
+        
         NSLog(@"Survey is pressed");
         
     }

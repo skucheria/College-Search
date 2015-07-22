@@ -4,6 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Survey View Controller-->
+        <scene sceneID="vWy-em-Onl">
+            <objects>
+                <viewController id="za0-R4-jY7" customClass="SurveyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mO9-mp-8eL"/>
+                        <viewControllerLayoutGuide type="bottom" id="yBF-qO-wIL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vZy-c9-Squ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NaQ-1j-CVt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GH-NB-ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1740" y="-734"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="ge3-68-DVw">
             <objects>
@@ -15,34 +33,13 @@
                     <view key="view" contentMode="scaleToFill" id="LDN-VK-9bN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tus-m7-Bgk">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="28" width="209" height="196"/>
-                                </variation>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="tus-m7-Bgk"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="tus-m7-Bgk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Male_profile_user_shadow_32.png" id="PWu-4G-2tG"/>
-                    <connections>
-                        <outlet property="profileView" destination="tus-m7-Bgk" id="c44-F6-6SZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtK-mb-0oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1302" y="-70"/>
+            <point key="canvasLocation" x="-1344" y="10"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -128,7 +125,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="62" y="127" width="254" height="30"/>
+                                    <rect key="frame" x="64" y="162" width="254" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-V7-Cin">
@@ -138,7 +135,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-11" y="302" width="400" height="30"/>
+                                    <rect key="frame" x="-9" y="344" width="400" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="SxZ-lS-SYK" kind="show" id="5vq-6r-8ks"/>
@@ -151,20 +148,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-16" y="255" width="400" height="30"/>
+                                    <rect key="frame" x="-14" y="297" width="400" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="Zs8-45-OEI" eventType="touchUpInside" id="9GV-6S-vSY"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVa-ad-PfZ">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="62" y="185" width="254" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRA-nQ-qvY">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="For password? Click here to reset">
@@ -172,7 +161,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="69" y="358" width="231" height="30"/>
+                                    <rect key="frame" x="71" y="405" width="231" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="j8S-tY-eZX" kind="popoverPresentation" popoverAnchorView="QRA-nQ-qvY" id="wiF-oX-uab">
@@ -180,6 +169,14 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVa-ad-PfZ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="220" width="254" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -187,8 +184,8 @@
                                 <exclude reference="1mZ-Mi-Zh5"/>
                                 <exclude reference="G1s-V7-Cin"/>
                                 <exclude reference="PPg-aq-o2u"/>
-                                <exclude reference="wVa-ad-PfZ"/>
                                 <exclude reference="QRA-nQ-qvY"/>
+                                <exclude reference="wVa-ad-PfZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -196,8 +193,8 @@
                                 <include reference="1mZ-Mi-Zh5"/>
                                 <include reference="G1s-V7-Cin"/>
                                 <include reference="PPg-aq-o2u"/>
-                                <include reference="wVa-ad-PfZ"/>
                                 <include reference="QRA-nQ-qvY"/>
+                                <include reference="wVa-ad-PfZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -340,6 +337,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="registerButtonPressed:" destination="SxZ-lS-SYK" eventType="touchUpInside" id="5GV-mw-ZJE"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="Rzx-38-84X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -394,22 +392,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2233.5" y="222"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fKD-Iv-Cg3">
-            <objects>
-                <viewController id="iT0-pB-ZRp" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vcl-n1-dAJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yma-oh-aBf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9Jb-xS-MGU">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0zK-Wc-kj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
