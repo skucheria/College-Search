@@ -50,8 +50,15 @@
     PFObject *userSave = [PFObject objectWithClassName:@"User"];
     [userSave setObject:_nameField.text forKey:@"fullname"];
     
-    [newUser saveInBackground];
+//    [newUser saveInBackground];
     
+    
+    [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError* error){
+        if (!error) {
+            NSLog(@"Survey Answers Saved!");
+        }
+    }];
+
     //self.window=mywindow;
     UIStoryboard *mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     

@@ -30,8 +30,9 @@
     [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
         if (!error) {
             _numSchools = objects.count;
-             self.allSchools = [NSArray arrayWithObjects:objects, nil];
-//            NSLog(@" %@", objects);
+             _allSchools = [NSArray arrayWithObjects:objects, nil];
+            NSLog(@" %@", _allSchools);
+            
 
             
 //              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];

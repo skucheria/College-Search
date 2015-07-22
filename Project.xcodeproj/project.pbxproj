@@ -21,6 +21,7 @@
 		CFC68A06F64630A779EE0F41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606881A26C519D7021C578E6 /* libPods.a */; };
 		FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC25866E1B59F81E00589CA9 /* SettingsViewController.m */; };
 		FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */; };
+		FC61BC911B603AD5003F5D9B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC61BC901B603AD5003F5D9B /* MainViewController.m */; };
 		FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */; };
 		FCAF7DC91B5CAD32004500C4 /* Male_profile_user_shadow_32.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */; };
 		FCAF7DCB1B5CAED7004500C4 /* Male_profile_user_shadow_512.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF7DCA1B5CAED7004500C4 /* Male_profile_user_shadow_512.png */; };
@@ -66,6 +67,8 @@
 		FC25866E1B59F81E00589CA9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		FC2586701B59FCE900589CA9 /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
 		FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
+		FC61BC8F1B603AD5003F5D9B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FC61BC901B603AD5003F5D9B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		FCAF7DC51B5CAC72004500C4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male_profile_user_shadow_32.png; path = ../../../../Downloads/Male_profile_user_shadow_32.png; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */,
 				FCAF7DC51B5CAC72004500C4 /* ProfileViewController.h */,
 				FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */,
+				FC61BC8F1B603AD5003F5D9B /* MainViewController.h */,
+				FC61BC901B603AD5003F5D9B /* MainViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				36EB93901B4F188A00CCF273 /* AppDelegate.m in Sources */,
 				FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */,
 				36EB938D1B4F188A00CCF273 /* main.m in Sources */,
+				FC61BC911B603AD5003F5D9B /* MainViewController.m in Sources */,
 				36EB93B51B4F18B800CCF273 /* ViewController.m in Sources */,
 				FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */,
 				FCB1A9AF1B5C978B009B265A /* ResetViewController.m in Sources */,
