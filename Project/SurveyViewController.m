@@ -63,11 +63,6 @@
     
     
     
-    
-    
-    
-    
-    
     //Question 1
     UIButton *q1 = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-50,self.view.frame.size.height/2-200,150, 50)];
     [q1 addTarget:self

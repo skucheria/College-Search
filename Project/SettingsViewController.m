@@ -80,8 +80,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row==0) {
-        UIViewController *surveyController = [[SurveyViewController alloc] init];
-        [self.navigationController pushViewController:surveyController animated:true];
+//        UIViewController *surveyController = [[SurveyViewController alloc] init];
+//        [self.navigationController pushViewController:surveyController animated:true];
         
         //edit free periods
 //        FreeSelectionViewController *freeSelection = [[FreeSelectionViewController alloc]init];
@@ -103,8 +103,8 @@
     }
     else if (indexPath.row==2){
         //Acknowledgements
-        UIViewController *ackController = [[AcknowledgementsViewController alloc]init];
-       [self.navigationController pushViewController:ackController animated:true];
+//        UIViewController *ackController = [[AcknowledgementsViewController alloc]init];
+//       [self.navigationController pushViewController:ackController animated:true];
         NSLog(@"Acknowledgments button pressed");
         
     }
