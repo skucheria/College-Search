@@ -51,6 +51,16 @@
     _password.placeholder = @"Password";
     
     
+    PFQuery *collegeQuery = [PFQuery queryWithClassName:@"Colleges"];
+    [collegeQuery whereKey:@"name" notEqualTo:@"poop"];
+    [collegeQuery setLimit:1000];
+    [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
+        if (!error) {
+            [PFObject pinAllInBackground:objects];
+        }
+    }];
+
+    
     
     //FOR PARSE STUFF, I WILL CHECK THE TEXT IN THE USERNAME AND PASSWORD TEXT FIELDS AND IF IT MATCHES SOMETHNG ON PARSE, IT WILL LOGIN.
     

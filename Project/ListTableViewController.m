@@ -17,6 +17,10 @@
 
 @property NSArray* allSchools;
 
+@property NSString *test;
+
+@property NSMutableArray *fistArray;
+
 @end
 
 @implementation ListTableViewController
@@ -24,19 +28,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PFQuery *collegeQuery = [PFQuery queryWithClassName:@"Colleges"];
-    [collegeQuery whereKey:@"name" notEqualTo:@"poop"];
-    [collegeQuery setLimit:1000];
-    [collegeQuery findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
+    self.view.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    self.title = @"Colleges";
+    
+    _allSchools = [[NSArray array] init];
+    _fistArray = [[NSMutableArray array] init];
+
+    
+    
+    PFQuery *collegeFromLocal = [PFQuery queryWithClassName:@"Colleges"];
+//    [collegeFromLocal fromLocalDatastore];
+//    collegeFromLocal  whereKey:@"name" notEqualTo:@"poop"];
+    [collegeFromLocal whereKey:@"name" notEqualTo:@"poop"];
+    [collegeFromLocal setLimit:1000];
+    [collegeFromLocal findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
         if (!error) {
-            _numSchools = objects.count;
-             _allSchools = [NSArray arrayWithObjects:objects, nil];
-            NSLog(@" %@", _allSchools);
+            for(int i=0; i<objects.count; ++i){
+                NSString *collegeName;
+                collegeName = [objects[i] objectForKey:@"name"];
+                [_fistArray addObject:collegeName];
+//                _test = [_fistArray objectAtIndex:i];
+//                NSLog(@" %@", _test);
+            }
+//            NSLog(@" %@", _fistArray);
+            
+            _allSchools = [_fistArray copy];
+//            NSLog(@" %@", _allSchools);
             
 
             
 //              _gpa = [[[objects firstObject]objectForKey:@"gpa"]doubleValue];
 //            NSLog(@" %f", _gpa);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
             
         }
         else{
@@ -69,7 +98,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 32;
+    return _allSchools.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,23 +123,21 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name" forIndexPath:indexPath];
+    NSLog(@"entering cellForRow");
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"name"];
+        NSLog(@"creating cell");
+    }
     
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    
-    NSString *college = [self.allSchools objectAtIndex:indexPath.row];
-    cell.textLabel.text = college;
+    NSString *name = [_allSchools objectAtIndex:indexPath.row];
+    cell.textLabel.text = name;
     
 
+
     
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"name"];
-//    }
-    
-    
-    
-    cell.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
 
     
     // Configure the cell...

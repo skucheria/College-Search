@@ -7,6 +7,7 @@
         <!--Survey View Controller-->
         <scene sceneID="vWy-em-Onl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GH-NB-ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="za0-R4-jY7" customClass="SurveyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mO9-mp-8eL"/>
@@ -19,47 +20,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="NaQ-1j-CVt"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5GH-NB-ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1740" y="-734"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="ge3-68-DVw">
-            <objects>
-                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jBJ-Vq-ebS" customClass="ProfileViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jrZ-tU-WJ1"/>
-                        <viewControllerLayoutGuide type="bottom" id="0rO-5G-qJT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LDN-VK-9bN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Male_profile_user_shadow_32.png" id="PWu-4G-2tG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CtK-mb-0oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1344" y="10"/>
-        </scene>
-        <!--Colleges-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Colleges" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-594" y="0.0"/>
+            <point key="canvasLocation" x="-1491" y="1644"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="j5F-g0-PdS">
@@ -92,37 +54,132 @@
             </objects>
             <point key="canvasLocation" x="-1504.5" y="962"/>
         </scene>
-        <!--Lists-->
-        <scene sceneID="hgV-dm-PiN">
+        <!--Root View Controller-->
+        <scene sceneID="6vo-gW-UU9">
             <objects>
-                <tableViewController id="Ps4-5P-DHi" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wj9-AX-6LP">
+                <tableViewController storyboardIdentifier="CollegesViewControler" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O5v-eM-2UH" customClass="ListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bqa-pY-TnO">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IhN-W7-WdL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cOD-62-jur">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IhN-W7-WdL" id="046-Ae-utc">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOD-62-jur" id="0id-RC-4DU">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Ps4-5P-DHi" id="PXz-AD-yoT"/>
-                            <outlet property="delegate" destination="Ps4-5P-DHi" id="7hH-q6-Ydd"/>
+                            <outlet property="dataSource" destination="O5v-eM-2UH" id="zgZ-jo-LKs"/>
+                            <outlet property="delegate" destination="O5v-eM-2UH" id="e7n-QJ-GOv"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Lists" id="xI3-rx-NH4"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="VrN-Ni-utQ"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dwL-aP-Xnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHS-bg-nBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-636" y="756"/>
+            <point key="canvasLocation" x="-666" y="54"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="d94-4X-og5">
+            <objects>
+                <navigationController id="WqT-cK-HaZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="Male_profile_user_shadow_64.png" id="r3v-2c-e5A"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T85-I9-pm7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5wQ-hR-b63" kind="relationship" relationship="rootViewController" id="yeA-Su-NhI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giY-eP-NNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1563" y="-602"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="bYh-lO-tz9">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5wQ-hR-b63" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hJU-aD-Er1"/>
+                        <viewControllerLayoutGuide type="bottom" id="QBw-TV-28X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lSc-9l-gu5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A8I-3J-ZqH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhL-aE-xfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-913.5" y="-602"/>
+        </scene>
+        <!--Colleges-->
+        <scene sceneID="hEd-6o-0pH">
+            <objects>
+                <navigationController id="PnV-ev-zAW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Colleges" image="graduation-cap2.png" id="W4I-2Z-3B6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="klV-FH-bwo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="O5v-eM-2UH" kind="relationship" relationship="rootViewController" id="rZo-wM-quy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iop-2V-3kU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1323" y="54"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="if6-YI-RJi">
+            <objects>
+                <tableViewController storyboardIdentifier="ListOfColleges" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cun-2y-StU" customClass="ListOfCollegesViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7w8-mS-uz3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bbr-LK-vWh">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bbr-LK-vWh" id="bd6-zl-ycY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cun-2y-StU" id="5e8-LM-tMX"/>
+                            <outlet property="delegate" destination="cun-2y-StU" id="8fJ-Ei-pM9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="pah-3s-8JB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ctj-PW-H2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="716"/>
+        </scene>
+        <!--Lists-->
+        <scene sceneID="xvY-hB-NOR">
+            <objects>
+                <navigationController id="5Qh-CS-lGM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lists" image="medical50.png" id="Q0H-oU-9oQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ydn-kP-INx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cun-2y-StU" kind="relationship" relationship="rootViewController" id="HzU-dJ-srN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAT-eN-fxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="716"/>
         </scene>
         <!--Settings-->
         <scene sceneID="rYT-jp-RRd">
             <objects>
                 <navigationController id="H9K-uk-Sbk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Iwn-4A-WTY"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings48.png" id="Iwn-4A-WTY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zdl-B6-AVY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -411,19 +468,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Ps4-5P-DHi" kind="relationship" relationship="viewControllers" id="1Pi-Zx-fgY"/>
-                        <segue destination="jBJ-Vq-ebS" kind="relationship" relationship="viewControllers" id="4Z4-I5-9TI"/>
+                        <segue destination="PnV-ev-zAW" kind="relationship" relationship="viewControllers" id="DFC-cK-g9e"/>
+                        <segue destination="5Qh-CS-lGM" kind="relationship" relationship="viewControllers" id="omh-Qb-Jia"/>
+                        <segue destination="WqT-cK-HaZ" kind="relationship" relationship="viewControllers" id="GDS-Hy-JS1"/>
                         <segue destination="H9K-uk-Sbk" kind="relationship" relationship="viewControllers" id="oa9-83-hfY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2233.5" y="214"/>
+            <point key="canvasLocation" x="-2233.5" y="240"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Male_profile_user_shadow_32.png" width="32" height="32"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Male_profile_user_shadow_64.png" width="27" height="27"/>
+        <image name="graduation-cap2.png" width="30" height="30"/>
+        <image name="medical50.png" width="30" height="30"/>
+        <image name="settings48.png" width="30" height="30"/>
     </resources>
 </document>
