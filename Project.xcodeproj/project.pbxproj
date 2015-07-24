@@ -27,6 +27,8 @@
 		FC95F0A51B618469007EF3D4 /* graduation-cap2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A41B618469007EF3D4 /* graduation-cap2.png */; };
 		FC95F0A71B6184E3007EF3D4 /* medical50.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A61B6184E3007EF3D4 /* medical50.png */; };
 		FC95F0A91B618905007EF3D4 /* settings48.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A81B618904007EF3D4 /* settings48.png */; };
+		FC95F0AD1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */; };
+		FC95F0B01B618EAF007EF3D4 /* CollegeProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */; };
 		FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */; };
 		FCAF7DC91B5CAD32004500C4 /* Male_profile_user_shadow_32.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */; };
 		FCAF7DCB1B5CAED7004500C4 /* Male_profile_user_shadow_512.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF7DCA1B5CAED7004500C4 /* Male_profile_user_shadow_512.png */; };
@@ -79,6 +81,9 @@
 		FC95F0A41B618469007EF3D4 /* graduation-cap2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graduation-cap2.png"; path = "../../../../Downloads/graduation-cap2.png"; sourceTree = "<group>"; };
 		FC95F0A61B6184E3007EF3D4 /* medical50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = medical50.png; path = ../../../../Downloads/medical50.png; sourceTree = "<group>"; };
 		FC95F0A81B618904007EF3D4 /* settings48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings48.png; path = ../../../../Downloads/settings48.png; sourceTree = "<group>"; };
+		FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11759428_993383067362045_1836886512_n.png; path = ../../../../Downloads/11759428_993383067362045_1836886512_n.png; sourceTree = "<group>"; };
+		FC95F0AE1B618EAF007EF3D4 /* CollegeProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeProfileViewController.h; sourceTree = "<group>"; };
+		FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollegeProfileViewController.m; sourceTree = "<group>"; };
 		FCAF7DC51B5CAC72004500C4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male_profile_user_shadow_32.png; path = ../../../../Downloads/Male_profile_user_shadow_32.png; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FC95F0A61B6184E3007EF3D4 /* medical50.png */,
+				FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */,
 				FC95F0A81B618904007EF3D4 /* settings48.png */,
 				FC95F0A41B618469007EF3D4 /* graduation-cap2.png */,
 				FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */,
@@ -213,6 +219,8 @@
 				FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */,
 				FC95F09D1B615361007EF3D4 /* ListOfCollegesViewController.h */,
 				FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */,
+				FC95F0AE1B618EAF007EF3D4 /* CollegeProfileViewController.h */,
+				FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -268,7 +276,7 @@
 				TargetAttributes = {
 					36EB93861B4F188A00CCF273 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = L5LXQRTBGV;
+						DevelopmentTeam = 4MEVZCD4E9;
 					};
 					36EB93A21B4F188B00CCF273 = {
 						CreatedOnToolsVersion = 6.4;
@@ -307,6 +315,7 @@
 				FC95F0A91B618905007EF3D4 /* settings48.png in Resources */,
 				36EB939B1B4F188A00CCF273 /* Images.xcassets in Resources */,
 				FC95F0A11B6153AC007EF3D4 /* Male_profile_user_shadow_64.png in Resources */,
+				FC95F0AD1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png in Resources */,
 				FC95F0A31B6157E1007EF3D4 /* male80.png in Resources */,
 				FC95F0A51B618469007EF3D4 /* graduation-cap2.png in Resources */,
 				FC95F0A71B6184E3007EF3D4 /* medical50.png in Resources */,
@@ -363,6 +372,7 @@
 				36EB93961B4F188A00CCF273 /* SecondViewController.m in Sources */,
 				36EB93B81B4F27A300CCF273 /* RegisterViewController.m in Sources */,
 				36F971481B51DC020062BFDF /* SurveyViewController.m in Sources */,
+				FC95F0B01B618EAF007EF3D4 /* CollegeProfileViewController.m in Sources */,
 				FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */,
 				36EB93901B4F188A00CCF273 /* AppDelegate.m in Sources */,
 				FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */,

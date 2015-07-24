@@ -80,8 +80,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row==0) {
-//        UIViewController *surveyController = [[SurveyViewController alloc] init];
-//        [self.navigationController pushViewController:surveyController animated:true];
+        UIViewController *surveyController = [[SurveyViewController alloc] init];
+        [self.navigationController pushViewController:surveyController animated:true];
         
         //edit free periods
 //        FreeSelectionViewController *freeSelection = [[FreeSelectionViewController alloc]init];
@@ -130,8 +130,7 @@
         
         
         
-        [PFUser logOut];
-        
+-
        
         
         //CATransition* transition = [CATransition animation];

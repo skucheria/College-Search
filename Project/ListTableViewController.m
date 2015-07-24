@@ -7,7 +7,11 @@
 //
 
 #import "ListTableViewController.h"
+#import "CollegeProfileViewController.h"
 #import <Parse/Parse.h>
+#import "AppDelegate.h"
+
+
 
 @interface ListTableViewController ()
 
@@ -25,8 +29,16 @@
 
 @implementation ListTableViewController
 
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+//    appDelegate=[(AppDelegate *)[UIApplication sharedApplication] delegate];//in didLoad method
+
     
     self.view.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
     self.tableView.dataSource = self;
@@ -102,9 +114,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+   [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
     
-  
+//    activeCollege = cell.textLabel.text ;
+    
+//    NSLog(@" %@", activeCollege);
+    
+    UIViewController *collegeProfile =[[CollegeProfileViewController alloc] init];
+    [self.navigationController pushViewController:collegeProfile animated:true];
+    
     
     NSLog(@"Pressed a College");
     
@@ -129,6 +149,8 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"name"];
         NSLog(@"creating cell");
     }
+    
+    
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     

@@ -11,5 +11,7 @@
 
 @interface ListTableViewController : UITableViewController  <UITableViewDelegate, UITableViewDataSource>
 
+//extern NSString *activeCollege;
+
 
 @end

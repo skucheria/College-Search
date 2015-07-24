@@ -1,5 +1,5 @@
 //
-//  ListOfCollegesViewController.h
+//  CollegeProfileViewController.h
 //  Project
 //
 //  Created by Siddharth Kucheria on 7/23/15.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListOfCollegesViewController : UITableViewController
-
+@interface CollegeProfileViewController : UIViewController
 
 @end
