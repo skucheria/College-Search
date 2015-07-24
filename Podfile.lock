@@ -11,12 +11,12 @@ PODS:
     - Facebook-iOS-SDK
     - Parse
     - ParseFacebookUtils
-  - Parse (1.7.5):
+  - Parse (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
-  - ParseFacebookUtils (1.7.5):
+  - ParseFacebookUtils (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
     - Facebook-iOS-SDK (~> 3.23)
-    - Parse (~> 1.7.5)
+    - Parse (~> 1.7.5.3)
   - pop (1.0.7)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
@@ -36,8 +36,8 @@ SPEC CHECKSUMS:
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
   JFParseFBFriends: 1734a46f4627e09f3069c9fb7211a32c926c3236
-  Parse: 7c0f115eff3e0cea3fac08d50bda47154edb8832
-  ParseFacebookUtils: ebd2bc2b4134f25aa8a7ed3c33fa0575b8ce921c
+  Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
+  ParseFacebookUtils: 008a24dc35884519ed6a6750648beb5149f1fad9
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
