@@ -130,14 +130,13 @@
         
         
         
--
+
        
         
         //CATransition* transition = [CATransition animation];
         //transition.duration = 0.2;
         //transition.type = kCATransitionFade;
         //[self.view.window.layer addAnimation:transition forKey:kCATransition];
-        NSLog(@"Going to next view");
         
 
         
