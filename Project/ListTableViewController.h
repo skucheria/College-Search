@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+
 @interface ListTableViewController : UITableViewController  <UITableViewDelegate, UITableViewDataSource>
-
-//extern NSString *activeCollege;
-
+    
 
 @end

@@ -16,7 +16,6 @@
 
 @implementation AppDelegate
 
-@synthesize activeCollege;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

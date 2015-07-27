@@ -9,7 +9,7 @@
 #import "CollegeProfileViewController.h"
 #import <Parse/Parse.h>
 #import "ListTableViewController.h"
-
+#import "Global.h"
 @interface CollegeProfileViewController ()
 
 @end
@@ -18,12 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
-    
     UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-30, self.view.frame.size.height/2-220,170, 20)];
-//    nameLabel.text  = activeCollege;
-//    nameLabel.text = current.username;
+    nameLabel.text = [Global sharedManager].someProperty;
+    nameLabel.textColor = [UIColor blackColor];
     nameLabel.layer.borderWidth=2;
     nameLabel.layer.borderColor = [[UIColor whiteColor]CGColor];
     

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListTableViewController.h"
 
 @interface CollegeProfileViewController : UIViewController
+
+@property PFObject *college;
 
 @end

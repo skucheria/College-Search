@@ -136,7 +136,7 @@
             //self.window=mywindow;
             UIStoryboard *mainstoryboard = self.storyboard;
             
-            UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"tabViewController"];
+            UIViewController *loginvc=[mainstoryboard instantiateViewControllerWithIdentifier:@"practiceViewController"];
             
             //CATransition* transition = [CATransition animation];
             //transition.duration = 0.2;

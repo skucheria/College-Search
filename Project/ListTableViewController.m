@@ -10,6 +10,7 @@
 #import "CollegeProfileViewController.h"
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "Global.h"
 
 
 
@@ -32,12 +33,10 @@
 
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     
-//    appDelegate=[(AppDelegate *)[UIApplication sharedApplication] delegate];//in didLoad method
 
     
     self.view.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
@@ -88,66 +87,42 @@
 }
 
 
+
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
     return _allSchools.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//
 
-    
-//    activeCollege = cell.textLabel.text ;
-    
-//    NSLog(@" %@", activeCollege);
-    
+    [Global sharedManager].someProperty = cell.textLabel.text;
+    NSLog(@" %@", [Global sharedManager].someProperty);
     UIViewController *collegeProfile =[[CollegeProfileViewController alloc] init];
     [self.navigationController pushViewController:collegeProfile animated:true];
     
     
     NSLog(@"Pressed a College");
-    
-    /*
-    NSDictionary *friend = [self.userFriends objectAtIndex:indexPath.row];
-    FriendPeriodViewController *periodsList = [[FriendPeriodViewController alloc] init];
-    [periodsList setLoggedInFreesArray:self.freesArray];
-    [periodsList setActiveFriend:friend];
-    [periodsList setDayOfCycle:self.dayOfCycleUS];
-    NSLog(@"in didSelect dayOfCycleUS = %d",self.dayOfCycleUS);
-    [self.navigationController pushViewController:periodsList animated:(YES)];
-    
-    */
+
     
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"entering cellForRow");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"name"];
-        NSLog(@"creating cell");
     }
     
     

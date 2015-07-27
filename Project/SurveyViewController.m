@@ -105,12 +105,12 @@
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(handleSaveButton:)];
     saveButton.tintColor = [UIColor greenColor];
     self.navigationItem.rightBarButtonItem = saveButton;
-
+/*
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(handleCancelButton:)];
     cancelButton.tintColor = [UIColor colorWithRed:0.88 green:0.40 blue:0.40 alpha:1.0];
     self.navigationItem.leftBarButtonItem = cancelButton;
 
-    
+    */
     
     // Do any additional setup after loading the view.
 }
@@ -138,7 +138,7 @@
     
     
 }
-
+/*
 - (void)handleCancelButton:(id)sender{
     
 //    UITableViewController *settings = [[SettingsViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -146,6 +146,7 @@
     
     
 }
+ */
 
 - (void)q1Pressed:(id)sender{
     int i = 0;

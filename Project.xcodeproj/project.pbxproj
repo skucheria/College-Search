@@ -21,6 +21,14 @@
 		CFC68A06F64630A779EE0F41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606881A26C519D7021C578E6 /* libPods.a */; };
 		FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC25866E1B59F81E00589CA9 /* SettingsViewController.m */; };
 		FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */; };
+		FC258CA11B64162A00F9C0C4 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */; };
+		FC258CA81B65A05500F9C0C4 /* NavigationPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CA71B65A05500F9C0C4 /* NavigationPracticeViewController.m */; };
+		FC258CAA1B65BA7600F9C0C4 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CA91B65BA7600F9C0C4 /* gear.png */; };
+		FC258CAC1B65BA9C00F9C0C4 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CAB1B65BA9C00F9C0C4 /* profile@2x.png */; };
+		FC258CAE1B65BAE800F9C0C4 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CAD1B65BAE800F9C0C4 /* gear@2x.png */; };
+		FC258CB01B65F09A00F9C0C4 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CAF1B65F09A00F9C0C4 /* burger@2x.png */; };
+		FC258CB31B66A21000F9C0C4 /* NavitationUIVIewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CB21B66A21000F9C0C4 /* NavitationUIVIewViewController.m */; };
+		FC258CB61B66B51700F9C0C4 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CB51B66B51700F9C0C4 /* Global.m */; };
 		FC95F09F1B615361007EF3D4 /* ListOfCollegesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */; };
 		FC95F0A11B6153AC007EF3D4 /* Male_profile_user_shadow_64.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */; };
 		FC95F0A31B6157E1007EF3D4 /* male80.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A21B6157E1007EF3D4 /* male80.png */; };
@@ -74,6 +82,18 @@
 		FC25866E1B59F81E00589CA9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		FC2586701B59FCE900589CA9 /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
 		FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
+		FC258C9F1B64162A00F9C0C4 /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
+		FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
+		FC258CA61B65A05500F9C0C4 /* NavigationPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationPracticeViewController.h; sourceTree = "<group>"; };
+		FC258CA71B65A05500F9C0C4 /* NavigationPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationPracticeViewController.m; sourceTree = "<group>"; };
+		FC258CA91B65BA7600F9C0C4 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = "../../../../Downloads/RNFrostedSidebar-master/example/gear.png"; sourceTree = "<group>"; };
+		FC258CAB1B65BA9C00F9C0C4 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "../../../../Downloads/RNFrostedSidebar-master/example/profile@2x.png"; sourceTree = "<group>"; };
+		FC258CAD1B65BAE800F9C0C4 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gear@2x.png"; path = "../../../../Downloads/RNFrostedSidebar-master/example/gear@2x.png"; sourceTree = "<group>"; };
+		FC258CAF1B65F09A00F9C0C4 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burger@2x.png"; path = "../../../../Downloads/RNFrostedSidebar-master/example/burger@2x.png"; sourceTree = "<group>"; };
+		FC258CB11B66A21000F9C0C4 /* NavitationUIVIewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavitationUIVIewViewController.h; sourceTree = "<group>"; };
+		FC258CB21B66A21000F9C0C4 /* NavitationUIVIewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavitationUIVIewViewController.m; sourceTree = "<group>"; };
+		FC258CB41B66B51700F9C0C4 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		FC258CB51B66B51700F9C0C4 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		FC95F09D1B615361007EF3D4 /* ListOfCollegesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListOfCollegesViewController.h; sourceTree = "<group>"; };
 		FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListOfCollegesViewController.m; sourceTree = "<group>"; };
 		FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male_profile_user_shadow_64.png; path = ../../../../Downloads/Male_profile_user_shadow_64.png; sourceTree = "<group>"; };
@@ -156,7 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				FC95F0A61B6184E3007EF3D4 /* medical50.png */,
+				FC258CAD1B65BAE800F9C0C4 /* gear@2x.png */,
+				FC258CAF1B65F09A00F9C0C4 /* burger@2x.png */,
+				FC258CA91B65BA7600F9C0C4 /* gear.png */,
 				FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */,
+				FC258CAB1B65BA9C00F9C0C4 /* profile@2x.png */,
 				FC95F0A81B618904007EF3D4 /* settings48.png */,
 				FC95F0A41B618469007EF3D4 /* graduation-cap2.png */,
 				FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */,
@@ -199,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				36EB939C1B4F188A00CCF273 /* LaunchScreen.xib */,
+				FC258CB41B66B51700F9C0C4 /* Global.h */,
+				FC258CB51B66B51700F9C0C4 /* Global.m */,
 				36EB93B31B4F18B700CCF273 /* ViewController.h */,
 				36EB93B41B4F18B800CCF273 /* ViewController.m */,
 				36EB93B61B4F27A300CCF273 /* RegisterViewController.h */,
@@ -221,6 +247,12 @@
 				FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */,
 				FC95F0AE1B618EAF007EF3D4 /* CollegeProfileViewController.h */,
 				FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */,
+				FC258C9F1B64162A00F9C0C4 /* PracticeViewController.h */,
+				FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */,
+				FC258CA61B65A05500F9C0C4 /* NavigationPracticeViewController.h */,
+				FC258CA71B65A05500F9C0C4 /* NavigationPracticeViewController.m */,
+				FC258CB11B66A21000F9C0C4 /* NavitationUIVIewViewController.h */,
+				FC258CB21B66A21000F9C0C4 /* NavitationUIVIewViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -309,7 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCAF7DCB1B5CAED7004500C4 /* Male_profile_user_shadow_512.png in Resources */,
+				FC258CB01B65F09A00F9C0C4 /* burger@2x.png in Resources */,
+				FC258CAE1B65BAE800F9C0C4 /* gear@2x.png in Resources */,
 				FCAF7DC91B5CAD32004500C4 /* Male_profile_user_shadow_32.png in Resources */,
+				FC258CAA1B65BA7600F9C0C4 /* gear.png in Resources */,
+				FC258CAC1B65BA9C00F9C0C4 /* profile@2x.png in Resources */,
 				36EB93991B4F188A00CCF273 /* Main.storyboard in Resources */,
 				36EB939E1B4F188A00CCF273 /* LaunchScreen.xib in Resources */,
 				FC95F0A91B618905007EF3D4 /* settings48.png in Resources */,
@@ -369,18 +405,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC258CB31B66A21000F9C0C4 /* NavitationUIVIewViewController.m in Sources */,
 				36EB93961B4F188A00CCF273 /* SecondViewController.m in Sources */,
 				36EB93B81B4F27A300CCF273 /* RegisterViewController.m in Sources */,
 				36F971481B51DC020062BFDF /* SurveyViewController.m in Sources */,
 				FC95F0B01B618EAF007EF3D4 /* CollegeProfileViewController.m in Sources */,
 				FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */,
+				FC258CA81B65A05500F9C0C4 /* NavigationPracticeViewController.m in Sources */,
 				36EB93901B4F188A00CCF273 /* AppDelegate.m in Sources */,
 				FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */,
 				36EB938D1B4F188A00CCF273 /* main.m in Sources */,
 				FC95F09F1B615361007EF3D4 /* ListOfCollegesViewController.m in Sources */,
 				36EB93B51B4F18B800CCF273 /* ViewController.m in Sources */,
 				FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */,
+				FC258CA11B64162A00F9C0C4 /* PracticeViewController.m in Sources */,
 				FCB1A9AF1B5C978B009B265A /* ResetViewController.m in Sources */,
+				FC258CB61B66B51700F9C0C4 /* Global.m in Sources */,
 				363A66E91B54BA2E0001B694 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

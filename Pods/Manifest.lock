@@ -18,6 +18,7 @@ PODS:
     - Facebook-iOS-SDK (~> 3.23)
     - Parse (~> 1.7.5.3)
   - pop (1.0.7)
+  - RNFrostedSidebar (0.2.0)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Parse (~> 1.6)
   - ParseFacebookUtils (~> 1.6)
   - pop (~> 1.0)
+  - RNFrostedSidebar (~> 0.2.0)
   - SDWebImage (~> 3.7)
   - SVProgressHUD (~> 1.1)
 
@@ -39,6 +41,7 @@ SPEC CHECKSUMS:
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseFacebookUtils: 008a24dc35884519ed6a6750648beb5149f1fad9
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  RNFrostedSidebar: 9491d8627e5e99b92334d36def432c0faf7ebae4
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
