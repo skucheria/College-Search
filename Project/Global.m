@@ -12,6 +12,7 @@
 @implementation Global
 
 @synthesize someProperty;
+@synthesize currentIndex;
 
 + (Global *)sharedManager {
     static Global *sharedMyManager = nil;
@@ -25,7 +26,9 @@
 - (id)init {
     if (self = [super init]) {
         someProperty = @"Default Property Value";
+        currentIndex = 100;
     }
+    
     return self;
 }
 

@@ -12,6 +12,11 @@
 
 @property (nonatomic, retain) NSString *someProperty;
 
+@property NSInteger currentIndex;
+
 + (Global *)sharedManager;
+
+
+
 
 @end

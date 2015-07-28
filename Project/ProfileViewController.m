@@ -9,10 +9,13 @@
 #import "ProfileViewController.h"
 #import <Parse/Parse.h>
 #import "PracticeViewController.h"
+#import "Global.h"
+
 
 @interface ProfileViewController ()
 @property UILabel *name;
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
+@property NSInteger selfIndex;
 
 @property int height;
 //@property UIImageView* profileView;
@@ -22,6 +25,7 @@
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
+    _selfIndex = 3;
     [super viewDidLoad];
     
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
@@ -70,24 +74,37 @@
         [sidebar dismissAnimated:YES];
         
         
-        UIStoryboard *mainstoryboard = self.storyboard;
+//        UIStoryboard *mainstoryboard = self.storyboard;
         
-        UIViewController *main=[mainstoryboard instantiateViewControllerWithIdentifier:@"main"];
+//        UIViewController *main=[mainstoryboard instantiateViewControllerWithIdentifier:@"main"];
         
-        [self presentViewController:main animated:NO completion:nil];
+//        [self presentViewController:main animated:NO completion:nil];
     }
     if(index==1){
-        [sidebar dismissAnimated:YES];
         
-//                UIViewController *profile = [[ProfileViewController alloc] init];
-//                [self.navigationController pushViewController:profile animated:YES];
+        [Global sharedManager].currentIndex = 1;
+        
+//        if(_selfIndex == [Global sharedManager].currentIndex){
+        
+            [sidebar dismiss];
+
+            
+//        }
+        
+        /*
+        else {
+        
+//            UIViewController *profile = [[ProfileViewController alloc] init];
+//            [self.navigationController pushViewController:profile animated:YES];
+            UIStoryboard *mainstoryboard = self.storyboard;
     
         
-       UIStoryboard *mainstoryboard = self.storyboard;
-        
-        UIViewController *settings=[mainstoryboard instantiateViewControllerWithIdentifier:@"Profile"];
+        UIViewController *profile=[mainstoryboard instantiateViewControllerWithIdentifier:@"Profile"];
     
-        [self presentViewController:settings animated:NO completion:nil];
+        [self presentViewController:profile animated:NO completion:nil];
+            
+        }
+         */
     }
     if (index == 2) {
         
