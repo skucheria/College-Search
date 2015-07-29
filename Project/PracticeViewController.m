@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SettingsViewController.h"
 #import <RNFrostedSidebar/RNFrostedSidebar.h>
+#import "ProfileViewController.h"
 
 
 @interface PracticeViewController ()
@@ -55,8 +56,7 @@
     
     RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
     //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
-    callout.width = 200;
-    callout.showFromRight = NO;
+    callout.width = 150;
     callout.delegate = self;
     //    callout.showFromRight = YES;
     [callout show];
@@ -67,38 +67,53 @@
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
     if (index == 3) {
-        [sidebar dismissAnimated:YES];
+        [sidebar dismissAnimated:YES completion:nil];
     }
     if (index == 0) {
+        [sidebar dismissAnimated:YES completion:nil];
+/*
+        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            if(finished){
+            UIStoryboard *mainstoryboard = self.storyboard;
+            
+            UIViewController *main=[mainstoryboard instantiateViewControllerWithIdentifier:@"main"];
+            
+            [self presentViewController:main animated:NO completion:nil];
+            }
+
         
-        UIStoryboard *mainstoryboard = self.storyboard;
-        
-        UIViewController *main=[mainstoryboard instantiateViewControllerWithIdentifier:@"main"];
-        
-        [self presentViewController:main animated:NO completion:nil];
-        
-        [sidebar dismissAnimated:YES];
+        }];
+ */
 
     }
     if(index==1){
+        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            if(finished){
+                
+//                UIViewController *secondVC = [[ProfileViewController alloc] init];
+//                [self.navigationController pushViewController:secondVC animated:YES];
+
         UIStoryboard *mainstoryboard = self.storyboard;
         
         UIViewController *settings=[mainstoryboard instantiateViewControllerWithIdentifier:@"Profile"];
         
         [self presentViewController:settings animated:NO completion:nil];
         
-        [sidebar dismissAnimated:YES];
+            }
+        }];
 
     }
     if (index == 2) {
 
-        [sidebar dismissAnimated:YES];
-        
+        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            if(finished){
         UIStoryboard *mainstoryboard = self.storyboard;
         
         UIViewController *settings=[mainstoryboard instantiateViewControllerWithIdentifier:@"Settings"];
         
         [self presentViewController:settings animated:NO completion:nil];
+            }
+        }];
     }
 }
 

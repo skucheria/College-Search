@@ -17,7 +17,12 @@
 
 - (UIImage *)rn_screenshot {
     UIGraphicsBeginImageContext(self.bounds.size);
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    if([self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]){
+        [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:NO];
+    }
+    else{
+        [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    }
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     NSData *imageData = UIImageJPEGRepresentation(image, 0.75);
@@ -87,13 +92,14 @@
             // ... if d is odd, use three box-blurs of size 'd', centered on the output pixel.
             //
             CGFloat inputRadius = blurRadius * [[UIScreen mainScreen] scale];
-            NSUInteger radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
+            uint32_t radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
             if (radius % 2 != 1) {
                 radius += 1; // force radius to be odd so that the three box-blur methodology works.
             }
-            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
-            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
-            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
+            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
+            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
+
         }
         BOOL effectImageBuffersAreSwapped = NO;
         if (hasSaturationChange) {
@@ -201,8 +207,8 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     
-    float r, g, b, a;
-    float darkenFactor = 0.3f;
+    CGFloat r, g, b, a;
+    CGFloat darkenFactor = 0.3f;
     UIColor *darkerColor;
     if ([self.originalBackgroundColor getRed:&r green:&g blue:&b alpha:&a]) {
         darkerColor = [UIColor colorWithRed:MAX(r - darkenFactor, 0.0) green:MAX(g - darkenFactor, 0.0) blue:MAX(b - darkenFactor, 0.0) alpha:a];
@@ -252,6 +258,7 @@ static RNFrostedSidebar *rn_frostedMenu;
 
 - (instancetype)initWithImages:(NSArray *)images selectedIndices:(NSIndexSet *)selectedIndices borderColors:(NSArray *)colors {
     if (self = [super init]) {
+        _isSingleSelect = NO;
         _contentView = [[UIScrollView alloc] init];
         _contentView.alwaysBounceHorizontal = NO;
         _contentView.alwaysBounceVertical = YES;
@@ -348,7 +355,7 @@ static RNFrostedSidebar *rn_frostedMenu;
                           delay:(initDelay + idx*0.1f)
          usingSpringWithDamping:10
           initialSpringVelocity:50
-                        options:UIViewAnimationOptionBeginFromCurrentState
+                        options:0
                      animations:^{
                          view.layer.transform = CATransform3DIdentity;
                          view.alpha = 1;
@@ -374,7 +381,7 @@ static RNFrostedSidebar *rn_frostedMenu;
 
 - (void)showInViewController:(UIViewController *)controller animated:(BOOL)animated {
     if (rn_frostedMenu != nil) {
-        [rn_frostedMenu dismissAnimated:NO];
+        [rn_frostedMenu dismissAnimated:NO completion:nil];
     }
     
     if ([self.delegate respondsToSelector:@selector(sidebar:willShowOnScreenAnimated:)]) {
@@ -466,16 +473,26 @@ static RNFrostedSidebar *rn_frostedMenu;
 #pragma mark - Dismiss
 
 - (void)dismiss {
-    [self dismissAnimated:YES];
+    [self dismissAnimated:YES completion:nil];
 }
 
 - (void)dismissAnimated:(BOOL)animated {
-    void (^completion)(BOOL) = ^(BOOL finished){
+    [self dismissAnimated:animated completion:nil];
+}
+
+- (void)dismissAnimated:(BOOL)animated completion:(void (^)(BOOL finished))completion {
+    void (^completionBlock)(BOOL) = ^(BOOL finished){
         [self rn_removeFromParentViewControllerCallingAppearanceMethods:YES];
-        
+      
         if ([self.delegate respondsToSelector:@selector(sidebar:didDismissFromScreenAnimated:)]) {
             [self.delegate sidebar:self didDismissFromScreenAnimated:YES];
         }
+        
+        rn_frostedMenu = nil;
+        
+		if (completion) {
+			completion(finished);
+		}
     };
     
     if ([self.delegate respondsToSelector:@selector(sidebar:willDismissFromScreenAnimated:)]) {
@@ -498,10 +515,10 @@ static RNFrostedSidebar *rn_frostedMenu;
                              self.contentView.frame = contentFrame;
                              self.blurView.frame = blurFrame;
                          }
-                         completion:completion];
+                         completion:completionBlock];
     }
     else {
-        completion(YES);
+        completionBlock(YES);
     }
 }
 
@@ -510,7 +527,7 @@ static RNFrostedSidebar *rn_frostedMenu;
 - (void)handleTap:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:self.view];
     if (! CGRectContainsPoint(self.contentView.frame, location)) {
-        [self dismissAnimated:YES];
+        [self dismissAnimated:YES completion:nil];
     }
     else {
         NSInteger tapIndex = [self indexOfTap:[recognizer locationInView:self.contentView]];
@@ -530,6 +547,13 @@ static RNFrostedSidebar *rn_frostedMenu;
         UIView *view = self.itemViews[index];
         
         if (didEnable) {
+            if (_isSingleSelect){
+                [self.selectedIndices removeAllIndexes];
+                [self.itemViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    UIView *aView = (UIView *)obj;
+                    [[aView layer] setBorderColor:[[UIColor clearColor] CGColor]];
+                }];
+            }
             view.layer.borderColor = stroke.CGColor;
             
             CABasicAnimation *borderAnimation = [CABasicAnimation animationWithKeyPath:@"borderColor"];
@@ -541,8 +565,10 @@ static RNFrostedSidebar *rn_frostedMenu;
             [self.selectedIndices addIndex:index];
         }
         else {
-            view.layer.borderColor = [UIColor clearColor].CGColor;
-            [self.selectedIndices removeIndex:index];
+            if (!_isSingleSelect){
+                view.layer.borderColor = [UIColor clearColor].CGColor;
+                [self.selectedIndices removeIndex:index];
+            }
         }
         
         CGRect pathFrame = CGRectMake(-CGRectGetMidX(view.bounds), -CGRectGetMidY(view.bounds), view.bounds.size.width, view.bounds.size.height);
@@ -602,7 +628,7 @@ static RNFrostedSidebar *rn_frostedMenu;
     }];
     
     NSInteger items = [self.itemViews count];
-    self.contentView.contentSize = CGSizeMake(0, items * (self.itemSize.height + leftPadding) + leftPadding);
+    self.contentView.contentSize = CGSizeMake(0, items * (self.itemSize.height + topPadding) + topPadding);
 }
 
 - (NSInteger)indexOfTap:(CGPoint)location {

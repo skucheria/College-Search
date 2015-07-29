@@ -239,38 +239,42 @@
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
     if (index == 3) {
-        [sidebar dismissAnimated:YES];
+        [sidebar dismissAnimated:YES completion:nil];
     }
     if (index == 0) {
-        
+        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            if(finished){
         UIStoryboard *mainstoryboard = self.storyboard;
         
         UIViewController *main=[mainstoryboard instantiateViewControllerWithIdentifier:@"main"];
         
         [self presentViewController:main animated:NO completion:nil];
         
-        [sidebar dismissAnimated:YES];
-        
+            }
+        }];
     }
     if(index==1){
+        
+        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            if(finished){
         UIStoryboard *mainstoryboard = self.storyboard;
         
         UIViewController *settings=[mainstoryboard instantiateViewControllerWithIdentifier:@"Profile"];
         
         [self presentViewController:settings animated:NO completion:nil];
         
-        [sidebar dismissAnimated:YES];
-        
+            }
+        }];
     }
     if (index == 2) {
         
-        [sidebar dismissAnimated:YES];
+        [sidebar dismissAnimated:YES completion:nil];
         
-        UIStoryboard *mainstoryboard = self.storyboard;
+//        UIStoryboard *mainstoryboard = self.storyboard;
         
-        UIViewController *settings=[mainstoryboard instantiateViewControllerWithIdentifier:@"Settings"];
+//        UIViewController *settings=[mainstoryboard instantiateViewControllerWithIdentifier:@"Settings"];
         
-        [self presentViewController:settings animated:NO completion:nil];
+//        [self presentViewController:settings animated:NO completion:nil];
     }
 }
 
