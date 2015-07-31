@@ -11,6 +11,7 @@
 
 
 @interface ListTableViewController : UITableViewController  <UITableViewDelegate, UITableViewDataSource>
-    
+- (IBAction)onOptions:(id)sender;
+
 
 @end

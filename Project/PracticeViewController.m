@@ -68,6 +68,7 @@
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
     if (index == 3) {
         [sidebar dismissAnimated:YES completion:nil];
+    
     }
     if (index == 0) {
         [sidebar dismissAnimated:YES completion:nil];
@@ -87,6 +88,7 @@
 
     }
     if(index==1){
+        
         [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             if(finished){
                 
@@ -101,10 +103,14 @@
         
             }
         }];
+        
+        
+//        [sidebar dismissAnimated:YES completion:nil];
+
 
     }
     if (index == 2) {
-
+        /*
         [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             if(finished){
         UIStoryboard *mainstoryboard = self.storyboard;
@@ -114,6 +120,9 @@
         [self presentViewController:settings animated:NO completion:nil];
             }
         }];
+        */
+        [sidebar dismissAnimated:YES completion:nil];
+
     }
 }
 

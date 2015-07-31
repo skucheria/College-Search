@@ -89,7 +89,14 @@
                             <outlet property="delegate" destination="O5v-eM-2UH" id="e7n-QJ-GOv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VrN-Ni-utQ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="VrN-Ni-utQ">
+                        <barButtonItem key="rightBarButtonItem" image="fast forward4.png" id="Mhw-HI-Fho">
+                            <color key="tintColor" white="0.059489678900000002" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onOptions:" destination="O5v-eM-2UH" id="RDx-Ri-ok4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHS-bg-nBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -597,9 +604,9 @@
     <resources>
         <image name="Male_profile_user_shadow_64.png" width="27" height="27"/>
         <image name="burger.png" width="19" height="17"/>
+        <image name="fast forward4.png" width="24" height="24"/>
         <image name="graduation-cap2.png" width="30" height="30"/>
         <image name="medical50.png" width="30" height="30"/>
         <image name="settings48.png" width="30" height="30"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

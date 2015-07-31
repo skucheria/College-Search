@@ -11,6 +11,8 @@
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "Global.h"
+#import "OptionsViewController.h"
+
 
 
 
@@ -26,6 +28,8 @@
 
 @property NSMutableArray *fistArray;
 
+@property NSArray *optionColleges;
+
 @end
 
 @implementation ListTableViewController
@@ -36,8 +40,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    UIBarButtonItem *infoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
     
-
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+    addButton.tintColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = infoButtonItem;
+     */
     
     self.view.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
     self.tableView.dataSource = self;
@@ -47,7 +58,7 @@
     
     _allSchools = [[NSArray array] init];
     _fistArray = [[NSMutableArray array] init];
-
+    _optionColleges = [[NSArray array] init];
     
     
     PFQuery *collegeFromLocal = [PFQuery queryWithClassName:@"Colleges"];
@@ -86,10 +97,22 @@
      ];
 }
 
+- (IBAction)onOptions:(id)sender{
+    
+    _optionColleges = [_allSchools copy];
+    
+    UITableViewController *options = [[OptionsViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:options animated:YES];
+    
+    
+}
 
 
     
-
+- (void)addItem:(id)sender{
+    
+    NSLog(@"Add Pressed");
+}
 
 
 
