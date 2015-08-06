@@ -60,7 +60,7 @@
     _fistArray = [[NSMutableArray array] init];
     _optionColleges = [[NSArray array] init];
     
-    
+    // This is for both querying local datastore and pulling from online everytime. 
     PFQuery *collegeFromLocal = [PFQuery queryWithClassName:@"Colleges"];
 //    [collegeFromLocal fromLocalDatastore];
 //    collegeFromLocal  whereKey:@"name" notEqualTo:@"poop"];

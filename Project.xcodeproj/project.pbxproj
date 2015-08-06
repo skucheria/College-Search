@@ -22,24 +22,12 @@
 		FC25866F1B59F81E00589CA9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC25866E1B59F81E00589CA9 /* SettingsViewController.m */; };
 		FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */; };
 		FC258CA11B64162A00F9C0C4 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */; };
-		FC258CAA1B65BA7600F9C0C4 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CA91B65BA7600F9C0C4 /* gear.png */; };
-		FC258CAC1B65BA9C00F9C0C4 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CAB1B65BA9C00F9C0C4 /* profile@2x.png */; };
-		FC258CAE1B65BAE800F9C0C4 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CAD1B65BAE800F9C0C4 /* gear@2x.png */; };
-		FC258CB01B65F09A00F9C0C4 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC258CAF1B65F09A00F9C0C4 /* burger@2x.png */; };
 		FC258CB61B66B51700F9C0C4 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CB51B66B51700F9C0C4 /* Global.m */; };
 		FC95F09F1B615361007EF3D4 /* ListOfCollegesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */; };
-		FC95F0A11B6153AC007EF3D4 /* Male_profile_user_shadow_64.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */; };
-		FC95F0A31B6157E1007EF3D4 /* male80.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A21B6157E1007EF3D4 /* male80.png */; };
-		FC95F0A51B618469007EF3D4 /* graduation-cap2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A41B618469007EF3D4 /* graduation-cap2.png */; };
-		FC95F0A71B6184E3007EF3D4 /* medical50.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A61B6184E3007EF3D4 /* medical50.png */; };
-		FC95F0A91B618905007EF3D4 /* settings48.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0A81B618904007EF3D4 /* settings48.png */; };
-		FC95F0AD1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png in Resources */ = {isa = PBXBuildFile; fileRef = FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */; };
 		FC95F0B01B618EAF007EF3D4 /* CollegeProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */; };
 		FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */; };
-		FCAF7DC91B5CAD32004500C4 /* Male_profile_user_shadow_32.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */; };
-		FCAF7DCB1B5CAED7004500C4 /* Male_profile_user_shadow_512.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF7DCA1B5CAED7004500C4 /* Male_profile_user_shadow_512.png */; };
 		FCB1A9AF1B5C978B009B265A /* ResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB1A9AE1B5C978B009B265A /* ResetViewController.m */; };
-		FCFCE8F11B695A61007BD97E /* fast forward4.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFCE8F01B695A61007BD97E /* fast forward4.png */; };
+		FCDE89E31B711E1A008100A3 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE89E21B711E1A008100A3 /* FiltersViewController.m */; };
 		FCFCE8F41B695CE3007BD97E /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFCE8F31B695CE3007BD97E /* OptionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -84,29 +72,18 @@
 		FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
 		FC258C9F1B64162A00F9C0C4 /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
 		FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
-		FC258CA91B65BA7600F9C0C4 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = "../../../../Downloads/RNFrostedSidebar-master/example/gear.png"; sourceTree = "<group>"; };
-		FC258CAB1B65BA9C00F9C0C4 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "../../../../Downloads/RNFrostedSidebar-master/example/profile@2x.png"; sourceTree = "<group>"; };
-		FC258CAD1B65BAE800F9C0C4 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gear@2x.png"; path = "../../../../Downloads/RNFrostedSidebar-master/example/gear@2x.png"; sourceTree = "<group>"; };
-		FC258CAF1B65F09A00F9C0C4 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burger@2x.png"; path = "../../../../Downloads/RNFrostedSidebar-master/example/burger@2x.png"; sourceTree = "<group>"; };
 		FC258CB41B66B51700F9C0C4 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		FC258CB51B66B51700F9C0C4 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		FC95F09D1B615361007EF3D4 /* ListOfCollegesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListOfCollegesViewController.h; sourceTree = "<group>"; };
 		FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListOfCollegesViewController.m; sourceTree = "<group>"; };
-		FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male_profile_user_shadow_64.png; path = ../../../../Downloads/Male_profile_user_shadow_64.png; sourceTree = "<group>"; };
-		FC95F0A21B6157E1007EF3D4 /* male80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male80.png; path = ../../../../Downloads/male80.png; sourceTree = "<group>"; };
-		FC95F0A41B618469007EF3D4 /* graduation-cap2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graduation-cap2.png"; path = "../../../../Downloads/graduation-cap2.png"; sourceTree = "<group>"; };
-		FC95F0A61B6184E3007EF3D4 /* medical50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = medical50.png; path = ../../../../Downloads/medical50.png; sourceTree = "<group>"; };
-		FC95F0A81B618904007EF3D4 /* settings48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings48.png; path = ../../../../Downloads/settings48.png; sourceTree = "<group>"; };
-		FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11759428_993383067362045_1836886512_n.png; path = ../../../../Downloads/11759428_993383067362045_1836886512_n.png; sourceTree = "<group>"; };
 		FC95F0AE1B618EAF007EF3D4 /* CollegeProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeProfileViewController.h; sourceTree = "<group>"; };
 		FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollegeProfileViewController.m; sourceTree = "<group>"; };
 		FCAF7DC51B5CAC72004500C4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male_profile_user_shadow_32.png; path = ../../../../Downloads/Male_profile_user_shadow_32.png; sourceTree = "<group>"; };
-		FCAF7DCA1B5CAED7004500C4 /* Male_profile_user_shadow_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male_profile_user_shadow_512.png; path = ../../../../Downloads/Male_profile_user_shadow_512.png; sourceTree = "<group>"; };
 		FCB1A9AD1B5C978B009B265A /* ResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetViewController.h; sourceTree = "<group>"; };
 		FCB1A9AE1B5C978B009B265A /* ResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetViewController.m; sourceTree = "<group>"; };
-		FCFCE8F01B695A61007BD97E /* fast forward4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fast forward4.png"; path = "../../../../Downloads/fast forward4.png"; sourceTree = "<group>"; };
+		FCDE89E11B711E1A008100A3 /* FiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersViewController.h; sourceTree = "<group>"; };
+		FCDE89E21B711E1A008100A3 /* FiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersViewController.m; sourceTree = "<group>"; };
 		FCFCE8F21B695CE3007BD97E /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		FCFCE8F31B695CE3007BD97E /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,19 +151,6 @@
 		36EB938A1B4F188A00CCF273 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FCFCE8F01B695A61007BD97E /* fast forward4.png */,
-				FC95F0A61B6184E3007EF3D4 /* medical50.png */,
-				FC258CAD1B65BAE800F9C0C4 /* gear@2x.png */,
-				FC258CAF1B65F09A00F9C0C4 /* burger@2x.png */,
-				FC258CA91B65BA7600F9C0C4 /* gear.png */,
-				FC95F0AC1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png */,
-				FC258CAB1B65BA9C00F9C0C4 /* profile@2x.png */,
-				FC95F0A81B618904007EF3D4 /* settings48.png */,
-				FC95F0A41B618469007EF3D4 /* graduation-cap2.png */,
-				FC95F0A01B6153AC007EF3D4 /* Male_profile_user_shadow_64.png */,
-				FC95F0A21B6157E1007EF3D4 /* male80.png */,
-				FCAF7DCA1B5CAED7004500C4 /* Male_profile_user_shadow_512.png */,
-				FCAF7DC81B5CAD32004500C4 /* Male_profile_user_shadow_32.png */,
 				36EB938B1B4F188A00CCF273 /* Info.plist */,
 				36EB938C1B4F188A00CCF273 /* main.m */,
 			);
@@ -251,6 +215,8 @@
 				FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */,
 				FCFCE8F21B695CE3007BD97E /* OptionsViewController.h */,
 				FCFCE8F31B695CE3007BD97E /* OptionsViewController.m */,
+				FCDE89E11B711E1A008100A3 /* FiltersViewController.h */,
+				FCDE89E21B711E1A008100A3 /* FiltersViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -338,22 +304,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCAF7DCB1B5CAED7004500C4 /* Male_profile_user_shadow_512.png in Resources */,
-				FC258CB01B65F09A00F9C0C4 /* burger@2x.png in Resources */,
-				FC258CAE1B65BAE800F9C0C4 /* gear@2x.png in Resources */,
-				FCAF7DC91B5CAD32004500C4 /* Male_profile_user_shadow_32.png in Resources */,
-				FC258CAA1B65BA7600F9C0C4 /* gear.png in Resources */,
-				FC258CAC1B65BA9C00F9C0C4 /* profile@2x.png in Resources */,
 				36EB93991B4F188A00CCF273 /* Main.storyboard in Resources */,
 				36EB939E1B4F188A00CCF273 /* LaunchScreen.xib in Resources */,
-				FC95F0A91B618905007EF3D4 /* settings48.png in Resources */,
 				36EB939B1B4F188A00CCF273 /* Images.xcassets in Resources */,
-				FC95F0A11B6153AC007EF3D4 /* Male_profile_user_shadow_64.png in Resources */,
-				FCFCE8F11B695A61007BD97E /* fast forward4.png in Resources */,
-				FC95F0AD1B618E15007EF3D4 /* 11759428_993383067362045_1836886512_n.png in Resources */,
-				FC95F0A31B6157E1007EF3D4 /* male80.png in Resources */,
-				FC95F0A51B618469007EF3D4 /* graduation-cap2.png in Resources */,
-				FC95F0A71B6184E3007EF3D4 /* medical50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +368,7 @@
 				FC95F09F1B615361007EF3D4 /* ListOfCollegesViewController.m in Sources */,
 				36EB93B51B4F18B800CCF273 /* ViewController.m in Sources */,
 				FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */,
+				FCDE89E31B711E1A008100A3 /* FiltersViewController.m in Sources */,
 				FC258CA11B64162A00F9C0C4 /* PracticeViewController.m in Sources */,
 				FCB1A9AF1B5C978B009B265A /* ResetViewController.m in Sources */,
 				FC258CB61B66B51700F9C0C4 /* Global.m in Sources */,

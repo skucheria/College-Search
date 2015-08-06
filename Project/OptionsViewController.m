@@ -8,6 +8,7 @@
 
 #import "OptionsViewController.h"
 #import "ListTableViewController.h"
+#import "FiltersViewController.h"
 
 @interface OptionsViewController ()
 
@@ -65,6 +66,17 @@
     
  
  return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row==0) {
+        UIViewController *surveyController = [[FiltersViewController alloc] init];
+        [self.navigationController pushViewController:surveyController animated:true];
+
+    }
 }
 
 

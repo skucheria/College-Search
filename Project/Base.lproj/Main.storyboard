@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rHd-ad-QiZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zs8-45-OEI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -90,8 +90,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="VrN-Ni-utQ">
-                        <barButtonItem key="rightBarButtonItem" image="fast forward4.png" id="Mhw-HI-Fho">
-                            <color key="tintColor" white="0.059489678900000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="rightBarButtonItem" title="More" style="plain" id="Mhw-HI-Fho">
+                            <color key="tintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onOptions:" destination="O5v-eM-2UH" id="RDx-Ri-ok4"/>
                             </connections>
@@ -101,6 +101,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHS-bg-nBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-666" y="54"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="czR-Cq-x1X">
+            <objects>
+                <viewController storyboardIdentifier="filterViewController" id="NI6-pZ-ldx" customClass="FiltersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E1a-f1-RFE"/>
+                        <viewControllerLayoutGuide type="bottom" id="4G1-aa-Lzq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZI-Z1-yqL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3g-tv-zYB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="255" y="73" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIt-mS-1Jx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="255" y="134" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN3-Tq-tTk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="134" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-Al-kwE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="English">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="73" width="50" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="y3g-tv-zYB"/>
+                                <exclude reference="OIt-mS-1Jx"/>
+                                <exclude reference="oN3-Tq-tTk"/>
+                                <exclude reference="GvF-Al-kwE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="y3g-tv-zYB"/>
+                                <include reference="OIt-mS-1Jx"/>
+                                <include reference="oN3-Tq-tTk"/>
+                                <include reference="GvF-Al-kwE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="English" destination="GvF-Al-kwE" id="ZLd-ko-ZQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYG-m7-6PK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="42"/>
         </scene>
         <!--Profile-->
         <scene sceneID="d94-4X-og5">
@@ -278,41 +352,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paa-Ek-APc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4080" y="496"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="iY0-fH-X0p">
-            <objects>
-                <viewController id="lix-Ec-W4Z" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9it-6t-EBp"/>
-                        <viewControllerLayoutGuide type="bottom" id="DlO-6K-Shv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xap-05-pw7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="jyZ-2j-pbf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5YP-Ju-s4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3397.5" y="1220"/>
-        </scene>
-        <!--Navigation Practice View Controller-->
-        <scene sceneID="iP1-R5-75W">
-            <objects>
-                <navigationController id="4YL-AO-f6c" customClass="NavigationPracticeViewController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T9P-B3-Pws">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lix-Ec-W4Z" kind="relationship" relationship="rootViewController" id="Yq2-CG-xtb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="73d-1Q-Odq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4176" y="1220"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ore-Tw-bsh">
@@ -604,7 +643,6 @@
     <resources>
         <image name="Male_profile_user_shadow_64.png" width="27" height="27"/>
         <image name="burger.png" width="19" height="17"/>
-        <image name="fast forward4.png" width="24" height="24"/>
         <image name="graduation-cap2.png" width="30" height="30"/>
         <image name="medical50.png" width="30" height="30"/>
         <image name="settings48.png" width="30" height="30"/>
