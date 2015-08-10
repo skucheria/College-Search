@@ -13,5 +13,5 @@
 @interface SettingsViewController : UITableViewController
 <RNFrostedSidebarDelegate>
 
-- (IBAction)onBurger:(id)sender;
+//- (IBAction)onBurger:(id)sender;
 @end

@@ -7,16 +7,27 @@
 //
 
 #import "FiltersViewController.h"
+#import "OptionsViewController.h"
 
 @interface FiltersViewController ()
 
 @end
 
 @implementation FiltersViewController
+@synthesize English, b1, b2, b3;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor redColor];
+    
+    UIButton *physics = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, 150, 40)];
+    [physics setTitle:@"Physics" forState:UIControlStateNormal];
+    physics.tintColor = [UIColor blackColor];
+    [self.view addSubview:physics];
+    
+
+    
+    
     // Do any additional setup after loading the view.
 }
 

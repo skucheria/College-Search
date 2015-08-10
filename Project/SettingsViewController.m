@@ -210,7 +210,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+/*
 - (IBAction)onBurger:(id)sender {
     
     NSLog(@"burger pressed");
@@ -286,8 +286,9 @@
         [self.optionIndices removeIndex:index];
     }
 }
+ *?
 
-
+*/
 
     
     

@@ -48,21 +48,7 @@
                             <outlet property="delegate" destination="o2k-u9-YbE" id="4kV-4G-X7n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="BeU-Uq-4Fl">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="OWI-lM-JgP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jIH-pb-hGS">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="burger.png">
-                                    <color key="titleColor" white="0.059489678900000002" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBurger:" destination="o2k-u9-YbE" eventType="touchUpInside" id="ivK-Ki-DHA"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="BeU-Uq-4Fl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGM-zb-h1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,80 +88,6 @@
             </objects>
             <point key="canvasLocation" x="-666" y="54"/>
         </scene>
-        <!--Filters View Controller-->
-        <scene sceneID="czR-Cq-x1X">
-            <objects>
-                <viewController storyboardIdentifier="filterViewController" id="NI6-pZ-ldx" customClass="FiltersViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="E1a-f1-RFE"/>
-                        <viewControllerLayoutGuide type="bottom" id="4G1-aa-Lzq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VZI-Z1-yqL">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3g-tv-zYB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="255" y="73" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIt-mS-1Jx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="255" y="134" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN3-Tq-tTk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="134" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-Al-kwE">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="English">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="73" width="50" height="30"/>
-                                </variation>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="y3g-tv-zYB"/>
-                                <exclude reference="OIt-mS-1Jx"/>
-                                <exclude reference="oN3-Tq-tTk"/>
-                                <exclude reference="GvF-Al-kwE"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="y3g-tv-zYB"/>
-                                <include reference="OIt-mS-1Jx"/>
-                                <include reference="oN3-Tq-tTk"/>
-                                <include reference="GvF-Al-kwE"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="English" destination="GvF-Al-kwE" id="ZLd-ko-ZQz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JYG-m7-6PK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="132" y="42"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="d94-4X-og5">
             <objects>
@@ -206,31 +118,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.05948967889908257" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="A8I-3J-ZqH">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="OXu-og-KtW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="84J-R6-zpG">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="burger.png">
-                                    <color key="titleColor" white="0.02347333716" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBurger:" destination="5wQ-hR-b63" eventType="touchUpInside" id="X4i-VD-mT1"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="A8I-3J-ZqH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhL-aE-xfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-913.5" y="-602"/>
         </scene>
-        <!--Colleges-->
+        <!--Navigation Controller-->
         <scene sceneID="hEd-6o-0pH">
             <objects>
                 <navigationController id="PnV-ev-zAW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Colleges" image="graduation-cap2.png" id="W4I-2Z-3B6"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="W4I-2Z-3B6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="klV-FH-bwo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -270,11 +168,11 @@
             </objects>
             <point key="canvasLocation" x="-45" y="716"/>
         </scene>
-        <!--Lists-->
+        <!--Navigation Controller-->
         <scene sceneID="xvY-hB-NOR">
             <objects>
                 <navigationController id="5Qh-CS-lGM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lists" image="medical50.png" id="Q0H-oU-9oQ"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="Q0H-oU-9oQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ydn-kP-INx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -639,12 +537,26 @@
             </objects>
             <point key="canvasLocation" x="-2233.5" y="240"/>
         </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="T8R-0G-Syt">
+            <objects>
+                <viewController storyboardIdentifier="FiltersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TxP-Dl-8Q3" customClass="FiltersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RZ5-sF-Axk"/>
+                        <viewControllerLayoutGuide type="bottom" id="u5r-rx-CV5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3cH-IN-lKa">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YdS-Cp-CC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Male_profile_user_shadow_64.png" width="27" height="27"/>
         <image name="burger.png" width="19" height="17"/>
-        <image name="graduation-cap2.png" width="30" height="30"/>
-        <image name="medical50.png" width="30" height="30"/>
         <image name="settings48.png" width="30" height="30"/>
     </resources>
 </document>

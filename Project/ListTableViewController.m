@@ -49,8 +49,8 @@
     addButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = infoButtonItem;
      */
-    
-    self.view.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
+    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor colorWithRed:0.26 green:0.26 blue:0.26 alpha:1.0];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -117,12 +117,37 @@
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _allSchools.count;
+    if(section == 0){
+        return _allSchools.count;
+
+    }
+    else if(section == 1){
+        return _allSchools.count;
+        
+    }
+    else{
+        return _allSchools.count;
+        
+    }
+}
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
+    if(section==0 ){
+        return @"Tier 1";
+    }
+    else if(section==1){
+        return @"Tier 2";
+    }
+    
+    else {
+        return @"Tier 3";
+    }
+    
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -155,9 +180,18 @@
     NSString *name = [_allSchools objectAtIndex:indexPath.row];
     cell.textLabel.text = name;
     
-
-
-    
+    if(indexPath.section == 0){
+        NSString *name = [_allSchools objectAtIndex:indexPath.row];
+        cell.textLabel.text = name;
+    }
+    else if(indexPath.section == 1){
+        NSString *name = [_allSchools objectAtIndex:indexPath.row];
+        cell.textLabel.text = name;
+    }
+    else if(indexPath.section == 2){
+        NSString *name = [_allSchools objectAtIndex:indexPath.row];
+        cell.textLabel.text = name;
+    }
 
     
     // Configure the cell...

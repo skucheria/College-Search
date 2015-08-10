@@ -63,7 +63,7 @@
     
     
 }
-
+/*
 
 - (IBAction)onBurger:(id)sender {
     
@@ -117,7 +117,7 @@
             
 //        }
         
-        /*
+ 
         else {
         
 //            UIViewController *profile = [[ProfileViewController alloc] init];
@@ -130,7 +130,7 @@
         [self presentViewController:profile animated:NO completion:nil];
             
         }
-         */
+         
     }
     if (index == 2) {
         [sidebar dismissAnimated:YES completion:^(BOOL finished) {
@@ -162,7 +162,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+*/
 /*
 #pragma mark - Navigation
 

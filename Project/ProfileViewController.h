@@ -13,7 +13,7 @@
 @interface ProfileViewController : UIViewController
 <RNFrostedSidebarDelegate>
 
-@property (strong, nonatomic) IBOutlet UIImageView *profileView;
-- (IBAction)onBurger:(id)sender;
+//@property (strong, nonatomic) IBOutlet UIImageView *profileView;
+//- (IBAction)onBurger:(id)sender;
 
 @end

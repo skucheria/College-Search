@@ -11,7 +11,10 @@
 @interface FiltersViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *English;
+@property (weak, nonatomic) IBOutlet UIButton *b1;
+@property (weak, nonatomic) IBOutlet UIButton *b2;
 
+@property (weak, nonatomic) IBOutlet UIButton *b3;
 
 
 
