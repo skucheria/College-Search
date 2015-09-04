@@ -30,9 +30,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
     
+    
+
+    self.view.backgroundColor = [UIColor colorWithRed:98.0f/255.0f green:26.0f/255.0f blue:33.0f/255.0f alpha:1.0];
+    self.view.frame = [UIScreen mainScreen].bounds;
+
     loginB.frame = CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height - 350, 400, 120);
     loginB.layer.cornerRadius = 10;
     loginB.layer.masksToBounds = true;
@@ -62,8 +65,6 @@
 
     
     
-    //FOR PARSE STUFF, I WILL CHECK THE TEXT IN THE USERNAME AND PASSWORD TEXT FIELDS AND IF IT MATCHES SOMETHNG ON PARSE, IT WILL LOGIN.
-    
     
 }
 - (void)didReceiveMemoryWarning {
@@ -74,6 +75,18 @@
 
 -(void) viewDidAppear:(BOOL)animated{
     PFUser *user = [PFUser currentUser];
+
+    _username = [[UITextField alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width-100, 30)];
+    _password = [[UITextField alloc] initWithFrame:CGRectMake(50,160, self.view.frame.size.width-100, 30)];
+    [_username setPlaceholder: @"  Username"];
+    [_password setPlaceholder: @"  Password"];
+    _username.backgroundColor = [UIColor whiteColor];
+    _username.layer.cornerRadius = 8;
+    _password.backgroundColor = [UIColor whiteColor];
+    _password.layer.cornerRadius = 8;
+    
+    [self.view addSubview:_username];
+    [self.view addSubview:_password];
     if (user.username !=nil){
         UIStoryboard *mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         

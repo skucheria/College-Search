@@ -64,7 +64,6 @@
     UILabel *q1Label =  [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-200, self.view.frame.size.height/2-230, 250, 50)];
     
     q1Label.text = @"Would you like to attend a priavte or public university?";
-    q1Label.sizeToFit;
     [self.view addSubview:q1Label];
     
     //Question 1

@@ -23,6 +23,14 @@
     [Parse enableLocalDatastore];
     [Parse setApplicationId:@"ollbdYGBKk2ewLCKFdEnMIUR2JkMISkYUiMVatpA"
                   clientKey:@"H8JOjbYIT4mgdyZHSiePGLsHvRFOXsdTTpshV0yU"];
+    
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:98.0f/255.0f green:26.0f/255.0f blue:33.0f/255.0f alpha:1.0]];
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:227.0f/255.0f green:223.0f/255.0f blue:214.0f/255.0f alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:98.0f/255.0f green:26.0f/255.0f blue:33.0f/255.0f alpha:1.0]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0]];
+
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
 
     return YES;
 }

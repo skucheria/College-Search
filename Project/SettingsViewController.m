@@ -26,7 +26,8 @@
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
 
     self.title = @"Settings";
-    self.view.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0];
+
     
     self.tableView.alwaysBounceVertical = false;
 
@@ -46,38 +47,94 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 3;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 4;
+    if(section == 0){
+        return 2;
+        
+    }
+    else if(section == 1){
+        return 1;
+    }
+    else{
+        return 1;
+        
+    }
 }
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if(section==0 ){
+        return @"My Account";
+    }
+    else if(section==1){
+        return @"Other";
+    }
+    
+    else {
+        return @"Logout";
+    }
+    
+    
+}
+
+/*
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
+    if (section == 0){
+        [headerView setBackgroundColor:[UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0]];
+    }
+    else{
+        [headerView setBackgroundColor:[UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0]];
+}
+    return headerView;
+
+    
+}
+*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"setting"];
     if(cell==nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"setting"];
     }
-    
-    cell.backgroundColor = [UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    
+    cell.backgroundColor = [UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0];
+    cell.textLabel.textColor = [UIColor blackColor];
+    if(indexPath.section==0){
     if (indexPath.row==0){
+        cell.textLabel.textColor = [UIColor blackColor];
+
         cell.textLabel.text = @"Survey";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    else if(indexPath.row==1){
-        cell.textLabel.text = @"Select Campus";
+        }
+    else if (indexPath.row==1){
+        cell.textLabel.textColor = [UIColor blackColor];
+        
+        cell.textLabel.text = @"Email and Password";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    else if (indexPath.row==2){
-        cell.textLabel.text = @"Acknowledgements";
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    else if(indexPath.row==3){
+    
+    if(indexPath.section ==1){
+        
+        if(indexPath.row==0){
+            cell.textLabel.textColor = [UIColor blackColor];
+
+            cell.textLabel.text = @"About";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    }
+    if(indexPath.section==2){
+        
+    
+     if(indexPath.row==0){
+        cell.textLabel.textColor = [UIColor blackColor];
+
         cell.textLabel.text = @"Logout";
         cell.textLabel.textColor = [UIColor colorWithRed:0.88 green:0.40 blue:0.40 alpha:1.0];
+    }
     }
     
     return cell;
@@ -85,7 +142,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    if(indexPath.section==0){
     if (indexPath.row==0) {
         UIViewController *surveyController = [[SurveyViewController alloc] init];
         [self.navigationController pushViewController:surveyController animated:true];
@@ -106,16 +163,22 @@
         //change campus
 //        UITableViewController *campusController = [[CampusSelectionViewController alloc] initWithStyle:UITableViewStylePlain];
 //        [self.navigationController pushViewController:campusController animated:true];
-        NSLog(@"Select Campus pressed");
+//        NSLog(@"Select Campus pressed");
     }
-    else if (indexPath.row==2){
+    }
+    else if(indexPath.section==1){
+     if (indexPath.row==0){
         //Acknowledgements
        UIViewController *ackController = [[AcknowledgementsViewController alloc]init];
        [self.navigationController pushViewController:ackController animated:true];
         NSLog(@"Acknowledgments button pressed");
         
     }
-    else if(indexPath.row==3){
+    }
+    else{
+
+    
+     if(indexPath.row==0){
         //logout of facebook
 //        PFUser *current = [PFUser currentUser];
 //        NSString *username =
@@ -153,6 +216,7 @@
     
         
         
+    }
     }
 }
 

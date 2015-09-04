@@ -1,19 +1,17 @@
 //
-//  Global.m
+//  CollegeLocalStore.m
 //  Project
 //
-//  Created by Siddharth Kucheria on 7/27/15.
+//  Created by Siddharth Kucheria on 8/11/15.
 //  Copyright (c) 2015 Siddharth Kucheria. All rights reserved.
 //
-
-#import "Global.h"
 #import <Parse/Parse.h>
+#import "CollegeLocalStore.h"
 
+@implementation CollegeLocalStore
 
-@implementation Global
+@end
 
-@synthesize someProperty;
-@synthesize currentIndex;
 
 + (Global *)sharedManager {
     static Global *sharedMyManager = nil;
@@ -26,12 +24,9 @@
 
 - (id)init {
     if (self = [super init]) {
-        someProperty = @"Default Property Value";
-        currentIndex = 100;
+//        someProperty = @"Default Property Value";
+//        currentIndex = 100;
     }
-    
- 
-    
     
     return self;
 }

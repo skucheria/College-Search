@@ -31,7 +31,7 @@
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
 
     
-    self.view.backgroundColor =[UIColor colorWithRed:0.38 green:0.58 blue:0.92 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0];
  
     self.title = @"Profile";
     

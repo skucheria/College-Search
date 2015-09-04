@@ -116,7 +116,6 @@
                     <view key="view" contentMode="scaleToFill" id="lSc-9l-gu5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.05948967889908257" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="A8I-3J-ZqH"/>
                 </viewController>
@@ -124,11 +123,11 @@
             </objects>
             <point key="canvasLocation" x="-913.5" y="-602"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Colleges-->
         <scene sceneID="hEd-6o-0pH">
             <objects>
                 <navigationController id="PnV-ev-zAW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="W4I-2Z-3B6"/>
+                    <tabBarItem key="tabBarItem" title="Colleges" image="college1-2.png" id="W4I-2Z-3B6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="klV-FH-bwo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -150,7 +149,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bbr-LK-vWh">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Identifier" id="Bbr-LK-vWh">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bbr-LK-vWh" id="bd6-zl-ycY">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -166,7 +165,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctj-PW-H2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="716"/>
+            <point key="canvasLocation" x="-174" y="1226"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xvY-hB-NOR">
@@ -183,7 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAT-eN-fxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717" y="716"/>
+            <point key="canvasLocation" x="-846" y="1226"/>
         </scene>
         <!--Settings-->
         <scene sceneID="rYT-jp-RRd">
@@ -263,14 +262,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mZ-Mi-Zh5">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="162" width="254" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-V7-Cin">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button">
@@ -312,40 +303,26 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVa-ad-PfZ">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="220" width="254" height="30"/>
-                                </variation>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="1mZ-Mi-Zh5"/>
                                 <exclude reference="G1s-V7-Cin"/>
                                 <exclude reference="PPg-aq-o2u"/>
                                 <exclude reference="QRA-nQ-qvY"/>
-                                <exclude reference="wVa-ad-PfZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="1mZ-Mi-Zh5"/>
                                 <include reference="G1s-V7-Cin"/>
                                 <include reference="PPg-aq-o2u"/>
                                 <include reference="QRA-nQ-qvY"/>
-                                <include reference="wVa-ad-PfZ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="loginB" destination="PPg-aq-o2u" id="XSS-za-SyY"/>
-                        <outlet property="password" destination="wVa-ad-PfZ" id="91a-qI-6bF"/>
                         <outlet property="registerB" destination="G1s-V7-Cin" id="nTc-fC-sdb"/>
-                        <outlet property="username" destination="1mZ-Mi-Zh5" id="tAz-OA-r2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdF-W0-n1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -546,17 +523,56 @@
                         <viewControllerLayoutGuide type="bottom" id="u5r-rx-CV5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3cH-IN-lKa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdS-Cp-CC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141" y="-248"/>
+        </scene>
+        <!--College Profile View Controller-->
+        <scene sceneID="cOu-Pw-HzE">
+            <objects>
+                <viewController storyboardIdentifier="CollegeProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="geo-8s-74y" customClass="CollegeProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i90-th-SdE"/>
+                        <viewControllerLayoutGuide type="bottom" id="0BI-aZ-Itd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1F9-22-Fg8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUL-E2-nDd">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="230"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QUL-E2-nDd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="QUL-E2-nDd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiW-m1-z9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="426"/>
         </scene>
     </scenes>
     <resources>
         <image name="Male_profile_user_shadow_64.png" width="27" height="27"/>
         <image name="burger.png" width="19" height="17"/>
+        <image name="college1-2.png" width="32" height="32"/>
         <image name="settings48.png" width="30" height="30"/>
     </resources>
 </document>

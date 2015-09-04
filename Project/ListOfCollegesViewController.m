@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.title = @"Your Lists";
     
-    
+    self.view.backgroundColor = [UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -43,15 +43,14 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"list" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    cell.backgroundColor = [UIColor colorWithRed:253.0f/255.0f green:248.0f/255.0f blue:205.0f/255.0f alpha:1.0];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

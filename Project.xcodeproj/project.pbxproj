@@ -23,6 +23,8 @@
 		FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */; };
 		FC258CA11B64162A00F9C0C4 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */; };
 		FC258CB61B66B51700F9C0C4 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FC258CB51B66B51700F9C0C4 /* Global.m */; };
+		FC7E9C9A1B7925090016D4B9 /* college1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7E9C991B7925090016D4B9 /* college1-2.png */; };
+		FC7E9CA81B7A630B0016D4B9 /* LoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7E9CA71B7A630B0016D4B9 /* LoadingIndicatorView.m */; };
 		FC95F09F1B615361007EF3D4 /* ListOfCollegesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */; };
 		FC95F0B01B618EAF007EF3D4 /* CollegeProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */; };
 		FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */; };
@@ -74,6 +76,9 @@
 		FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
 		FC258CB41B66B51700F9C0C4 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		FC258CB51B66B51700F9C0C4 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		FC7E9C991B7925090016D4B9 /* college1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "college1-2.png"; path = "../../../../Downloads/college1-2.png"; sourceTree = "<group>"; };
+		FC7E9CA61B7A630B0016D4B9 /* LoadingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingIndicatorView.h; sourceTree = "<group>"; };
+		FC7E9CA71B7A630B0016D4B9 /* LoadingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingIndicatorView.m; sourceTree = "<group>"; };
 		FC95F09D1B615361007EF3D4 /* ListOfCollegesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListOfCollegesViewController.h; sourceTree = "<group>"; };
 		FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListOfCollegesViewController.m; sourceTree = "<group>"; };
 		FC95F0AE1B618EAF007EF3D4 /* CollegeProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeProfileViewController.h; sourceTree = "<group>"; };
@@ -140,7 +145,9 @@
 			children = (
 				36EB938E1B4F188A00CCF273 /* AppDelegate.h */,
 				36EB938F1B4F188A00CCF273 /* AppDelegate.m */,
-				36EB93971B4F188A00CCF273 /* Main.storyboard */,
+				FC7E9CA51B7A62EA0016D4B9 /* Custom View Items */,
+				FC7E9CA01B7A53760016D4B9 /* Storyboards/Nibs */,
+				FC7E9C9E1B7A53060016D4B9 /* Global Classes */,
 				FC0F9D151B56EF1000172CC1 /* View Controllers */,
 				36EB939A1B4F188A00CCF273 /* Images.xcassets */,
 				36EB938A1B4F188A00CCF273 /* Supporting Files */,
@@ -151,6 +158,7 @@
 		36EB938A1B4F188A00CCF273 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC7E9C991B7925090016D4B9 /* college1-2.png */,
 				36EB938B1B4F188A00CCF273 /* Info.plist */,
 				36EB938C1B4F188A00CCF273 /* main.m */,
 			);
@@ -186,39 +194,103 @@
 		FC0F9D151B56EF1000172CC1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36EB939C1B4F188A00CCF273 /* LaunchScreen.xib */,
+				FC7E9CA11B7A53AC0016D4B9 /* Settings Views */,
+				FC7E9C9F1B7A532C0016D4B9 /* Startup Items */,
+				FC7E9CA31B7A54970016D4B9 /* Main Views */,
+				FC7E9CA41B7A55150016D4B9 /* ListColleges Views */,
+				FC7E9CA21B7A53F80016D4B9 /* Not In User Views */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FC7E9C9E1B7A53060016D4B9 /* Global Classes */ = {
+			isa = PBXGroup;
+			children = (
 				FC258CB41B66B51700F9C0C4 /* Global.h */,
 				FC258CB51B66B51700F9C0C4 /* Global.m */,
+			);
+			name = "Global Classes";
+			sourceTree = "<group>";
+		};
+		FC7E9C9F1B7A532C0016D4B9 /* Startup Items */ = {
+			isa = PBXGroup;
+			children = (
 				36EB93B31B4F18B700CCF273 /* ViewController.h */,
 				36EB93B41B4F18B800CCF273 /* ViewController.m */,
 				36EB93B61B4F27A300CCF273 /* RegisterViewController.h */,
 				36EB93B71B4F27A300CCF273 /* RegisterViewController.m */,
 				FCB1A9AD1B5C978B009B265A /* ResetViewController.h */,
 				FCB1A9AE1B5C978B009B265A /* ResetViewController.m */,
+			);
+			name = "Startup Items";
+			sourceTree = "<group>";
+		};
+		FC7E9CA01B7A53760016D4B9 /* Storyboards/Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				36EB93971B4F188A00CCF273 /* Main.storyboard */,
+				36EB939C1B4F188A00CCF273 /* LaunchScreen.xib */,
+			);
+			name = Storyboards/Nibs;
+			sourceTree = "<group>";
+		};
+		FC7E9CA11B7A53AC0016D4B9 /* Settings Views */ = {
+			isa = PBXGroup;
+			children = (
 				36F971461B51DC020062BFDF /* SurveyViewController.h */,
 				36F971471B51DC020062BFDF /* SurveyViewController.m */,
-				363A66E71B54BA2E0001B694 /* ListTableViewController.h */,
-				363A66E81B54BA2E0001B694 /* ListTableViewController.m */,
-				36EB93941B4F188A00CCF273 /* SecondViewController.h */,
-				36EB93951B4F188A00CCF273 /* SecondViewController.m */,
-				FC25866D1B59F81E00589CA9 /* SettingsViewController.h */,
-				FC25866E1B59F81E00589CA9 /* SettingsViewController.m */,
 				FC2586701B59FCE900589CA9 /* AcknowledgementsViewController.h */,
 				FC2586711B59FCE900589CA9 /* AcknowledgementsViewController.m */,
+			);
+			name = "Settings Views";
+			sourceTree = "<group>";
+		};
+		FC7E9CA21B7A53F80016D4B9 /* Not In User Views */ = {
+			isa = PBXGroup;
+			children = (
+				36EB93941B4F188A00CCF273 /* SecondViewController.h */,
+				36EB93951B4F188A00CCF273 /* SecondViewController.m */,
+				FC258C9F1B64162A00F9C0C4 /* PracticeViewController.h */,
+				FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */,
+			);
+			name = "Not In User Views";
+			sourceTree = "<group>";
+		};
+		FC7E9CA31B7A54970016D4B9 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC25866D1B59F81E00589CA9 /* SettingsViewController.h */,
+				FC25866E1B59F81E00589CA9 /* SettingsViewController.m */,
+				363A66E71B54BA2E0001B694 /* ListTableViewController.h */,
+				363A66E81B54BA2E0001B694 /* ListTableViewController.m */,
 				FCAF7DC51B5CAC72004500C4 /* ProfileViewController.h */,
 				FCAF7DC61B5CAC72004500C4 /* ProfileViewController.m */,
 				FC95F09D1B615361007EF3D4 /* ListOfCollegesViewController.h */,
 				FC95F09E1B615361007EF3D4 /* ListOfCollegesViewController.m */,
+			);
+			name = "Main Views";
+			sourceTree = "<group>";
+		};
+		FC7E9CA41B7A55150016D4B9 /* ListColleges Views */ = {
+			isa = PBXGroup;
+			children = (
 				FC95F0AE1B618EAF007EF3D4 /* CollegeProfileViewController.h */,
 				FC95F0AF1B618EAF007EF3D4 /* CollegeProfileViewController.m */,
-				FC258C9F1B64162A00F9C0C4 /* PracticeViewController.h */,
-				FC258CA01B64162A00F9C0C4 /* PracticeViewController.m */,
 				FCFCE8F21B695CE3007BD97E /* OptionsViewController.h */,
 				FCFCE8F31B695CE3007BD97E /* OptionsViewController.m */,
 				FCDE89E11B711E1A008100A3 /* FiltersViewController.h */,
 				FCDE89E21B711E1A008100A3 /* FiltersViewController.m */,
 			);
-			name = "View Controllers";
+			name = "ListColleges Views";
+			sourceTree = "<group>";
+		};
+		FC7E9CA51B7A62EA0016D4B9 /* Custom View Items */ = {
+			isa = PBXGroup;
+			children = (
+				FC7E9CA61B7A630B0016D4B9 /* LoadingIndicatorView.h */,
+				FC7E9CA71B7A630B0016D4B9 /* LoadingIndicatorView.m */,
+			);
+			name = "Custom View Items";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7E9C9A1B7925090016D4B9 /* college1-2.png in Resources */,
 				36EB93991B4F188A00CCF273 /* Main.storyboard in Resources */,
 				36EB939E1B4F188A00CCF273 /* LaunchScreen.xib in Resources */,
 				36EB939B1B4F188A00CCF273 /* Images.xcassets in Resources */,
@@ -366,6 +439,7 @@
 				FC2586721B59FCE900589CA9 /* AcknowledgementsViewController.m in Sources */,
 				36EB938D1B4F188A00CCF273 /* main.m in Sources */,
 				FC95F09F1B615361007EF3D4 /* ListOfCollegesViewController.m in Sources */,
+				FC7E9CA81B7A630B0016D4B9 /* LoadingIndicatorView.m in Sources */,
 				36EB93B51B4F18B800CCF273 /* ViewController.m in Sources */,
 				FCAF7DC71B5CAC72004500C4 /* ProfileViewController.m in Sources */,
 				FCDE89E31B711E1A008100A3 /* FiltersViewController.m in Sources */,
@@ -451,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -489,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

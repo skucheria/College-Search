@@ -30,6 +30,7 @@
     [self.view addSubview:nameLabel];
     
     
+    
     // Do any additional setup after loading the view.
 }
 

@@ -11,9 +11,9 @@
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 @interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UITextField *username;
+@property (strong, nonatomic)  UITextField *username;
 
-@property (strong, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic)  UITextField *password;
 
 @property (strong, nonatomic) IBOutlet UIButton *loginB;
 

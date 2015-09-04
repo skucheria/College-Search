@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "LoadingIndicatorView.h"
+
 
 
 @interface ListTableViewController : UITableViewController  <UITableViewDelegate, UITableViewDataSource>
