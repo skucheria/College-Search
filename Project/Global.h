@@ -14,6 +14,8 @@
 
 @property NSInteger currentIndex;
 
+@property NSMutableArray *selectedFilters;
+
 @property NSArray* colleges;
 
 + (Global *)sharedManager;

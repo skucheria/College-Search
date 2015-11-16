@@ -34,6 +34,11 @@
 @property NSMutableArray *tierMutableArray;
 @property NSArray *tier1Final;
 
+@property NSMutableArray *filterTierArray;
+@property NSMutableArray *parseFilterArray;
+@property NSArray *filterTierFinal;
+@property NSMutableArray *selectedFilters;
+
 @property LoadingIndicatorView *loadingView;
 @property int finishedLoadingCount;
 
@@ -49,7 +54,10 @@
     [super viewDidLoad];
     _finishedLoadingCount = 0;
     
-    [self setNeedsStatusBarAppearanceUpdate];
+    
+    
+    
+[self setNeedsStatusBarAppearanceUpdate];
 /*
     PFQuery *collegeFromLocal = [PFQuery queryWithClassName:@"Colleges"];
     [collegeFromLocal setLimit:1000];
@@ -74,7 +82,10 @@
     self.tableView.delegate = self;
     
     self.title = @"Colleges";
-    
+    NSString* phys = @"physics";
+    _selectedFilters = [[NSMutableArray array]init];
+    [_selectedFilters addObject:phys];
+    _parseFilterArray = [[NSMutableArray array] init];
     _allSchools = [[NSArray array] init];
     _fistArray = [[NSMutableArray array] init];
     _optionColleges = [[NSArray array] init];
@@ -103,11 +114,35 @@
             }
             for(int i=0; i<objects.count; ++i){
                 NSNumber *tierNumber;
+                NSString *filter;
                 tierNumber = [objects[i] objectForKey:@"tier"];
+                if([tierNumber intValue] == 1)
+                {
+                    _parseFilterArray = [objects[i] objectForKey:@"topMajors"];
 //                NSLog(@" %@", tierNumber);
-                if([tierNumber intValue] == 1){
+                //able to sort by filters now
+                //next step is to go trhough all colleges with a lot of filters
+                //i also have ot have a filtersChosenArray and compare that with the filters of the schools if size of filtersChosen is >0
+                    filter = _parseFilterArray[0];
+                    if([_selectedFilters count]>0)
+                    {
+                        for(int x=0; x<[_parseFilterArray count]; x++){
+                            for(int y=0; y<[_selectedFilters count]; y++)
+                            {
+                                if( _selectedFilters[0]==_parseFilterArray[0])
+                                {
+                                    [_tierMutableArray addObject:objects[i]];
+
+                                
+                                }
+                            }
+                    }
+                }
+                    /* THIS CODE MAKES IT WORK FOR FILTERS
+                if([tierNumber intValue] == 1 && [filter isEqual:@"physics"]){
                     [_tierMutableArray addObject:objects[i]];
                 }
+                     */
             }
             _tier1Final = [_tierMutableArray copy];
             _allSchools = [_fistArray copy];
@@ -119,12 +154,12 @@
             });
             [_loadingView.loadingIndicator stopAnimating];
             [_loadingView removeFromSuperview];
-            
+            }
         }
         else{
             NSLog(@"Error in periodsQuery: %@ %@",error,error.userInfo);
         }
-    }
+        }
      ];
 
     /*

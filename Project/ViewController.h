@@ -19,6 +19,9 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *registerB;
 
+@property NSMutableArray *selectedFilters;
+
+
 - (IBAction)loginButtonPressed:(id)sender;
 
 

@@ -28,11 +28,9 @@
     if (self = [super init]) {
         someProperty = @"Default Property Value";
         currentIndex = 100;
+        _selectedFilters = [NSMutableArray array];
     }
-    
- 
-    
-    
+
     return self;
 }
 
