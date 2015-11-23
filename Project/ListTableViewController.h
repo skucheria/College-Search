@@ -14,6 +14,7 @@
 
 @interface ListTableViewController : UITableViewController  <UITableViewDelegate, UITableViewDataSource>
 - (IBAction)onOptions:(id)sender;
+- (IBAction)onReload:(id)sender;
 
 
 @end

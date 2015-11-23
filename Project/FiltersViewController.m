@@ -20,8 +20,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     
-    UIButton *physics = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, 150, 40)];
+    UIButton *physics = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, 130, 40)];
     [physics setTitle:@"Physics" forState:UIControlStateNormal];
+    [[physics layer] setBorderWidth:2.0f];
+    [[physics layer] setBorderColor:[UIColor blackColor].CGColor];
+
     physics.tintColor = [UIColor blackColor];
     [self.view addSubview:physics];
     

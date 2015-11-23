@@ -129,12 +129,18 @@
                         for(int x=0; x<[_parseFilterArray count]; x++){
                             for(int y=0; y<[_selectedFilters count]; y++)
                             {
+                                
+                                if([tierNumber intValue] == 1 && [filter isEqual:@"physics"]){
+                                    [_tierMutableArray addObject:objects[i]];
+                                }
+                                /*
                                 if( _selectedFilters[0]==_parseFilterArray[0])
                                 {
                                     [_tierMutableArray addObject:objects[i]];
 
                                 
                                 }
+                                 */
                             }
                     }
                 }
@@ -222,8 +228,23 @@
     
 }
 
-
+- (IBAction)onReload:(id)sender {
+    _loadingView = [[LoadingIndicatorView alloc]initWithFrame:CGRectMake(0, 0, 75, 75)];
+    [_loadingView setCenter:self.navigationController.view.center];
+    [_loadingView.loadingIndicator startAnimating];
+    [self.view addSubview:_loadingView];
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+    [_loadingView.loadingIndicator stopAnimating];
+    [_loadingView removeFromSuperview];
+    
+    
+}
+
+
+
 - (void)addItem:(id)sender{
     
     NSLog(@"Add Pressed");
